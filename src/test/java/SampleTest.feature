@@ -1,3 +1,4 @@
+@UI
 Feature: Sample Test
 
   Scenario: Sample

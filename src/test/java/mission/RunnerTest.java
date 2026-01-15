@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         features = ".",
-        glue = {"AutomationTest.mission"},
+        glue = {"mission"},
         tags = {},
         format = {
                 "pretty",
