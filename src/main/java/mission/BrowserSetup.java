@@ -32,25 +32,69 @@ public class BrowserSetup extends BasePage {
         if (browser.equalsIgnoreCase("Chrome")) {
             //System.setProperty("webdriver.chrome.driver", CHROME_WIN);
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            ChromeOptions chromeOptions = new ChromeOptions();
+            // Disable password manager popups and notifications
+            chromeOptions.addArguments("--disable-save-password-bubble");
+            chromeOptions.addArguments("--disable-password-manager-reauthentication");
+            chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            chromeOptions.setExperimentalOption("useAutomationExtension", false);
+            chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+            chromeOptions.setExperimentalOption("prefs", java.util.Map.of(
+                "credentials_enable_service", false,
+                "profile.password_manager_enabled", false,
+                "profile.password_manager_leak_detection", false
+            ));
+            driver = new ChromeDriver(chromeOptions);
+            driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("edge")) {
             //System.setProperty("webdriver.edge.driver", EDGE);
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
+            driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("Firefox")) {
             WebDriverManager.firefoxdriver().setup();
             //System.setProperty("webdriver.gecko.driver", FIREFOX_WIN);
             driver = new FirefoxDriver();
+            driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("chromeMac")) {
             //System.setProperty("webdriver.chrome.driver", CHROME_MAC);
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            ChromeOptions chromeOptions = new ChromeOptions();
+            // Disable password manager popups and notifications
+            chromeOptions.addArguments("--disable-save-password-bubble");
+            chromeOptions.addArguments("--disable-password-manager-reauthentication");
+            chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            chromeOptions.setExperimentalOption("useAutomationExtension", false);
+            chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+            chromeOptions.setExperimentalOption("prefs", java.util.Map.of(
+                "credentials_enable_service", false,
+                "profile.password_manager_enabled", false,
+                "profile.password_manager_leak_detection", false
+            ));
+            driver = new ChromeDriver(chromeOptions);
+            driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("chromeHeadless")) {
             //System.setProperty("webdriver.chrome.driver", CHROME_MAC);
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
+            // Disable password manager popups and notifications
+            chromeOptions.addArguments("--disable-save-password-bubble");
+            chromeOptions.addArguments("--disable-password-manager-reauthentication");
+            chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            chromeOptions.setExperimentalOption("useAutomationExtension", false);
+            chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+            chromeOptions.setExperimentalOption("prefs", java.util.Map.of(
+                "credentials_enable_service", false,
+                "profile.password_manager_enabled", false,
+                "profile.password_manager_leak_detection", false
+            ));
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(chromeOptions);
+            driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
         } else if (browser.equalsIgnoreCase("api")) {
 
         } else {

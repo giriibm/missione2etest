@@ -9,6 +9,9 @@ import java.util.List;
 
 public class CartPage extends BasePage {
 
+    @FindBy(className = "cart_item")
+    private List<WebElement> cartItems;
+
     @FindBy(className = "cart_quantity")
     private List<WebElement> cartQuantities;
 
@@ -26,7 +29,26 @@ public class CartPage extends BasePage {
         // Convert item name to data-test format for remove button
         String dataTestId = "remove-" + itemName.toLowerCase().replace(" ", "-");
         WebElement removeButton = driver.findElement(By.cssSelector("[data-test='" + dataTestId + "']"));
+        
+        // Get current count before removal
+        int countBefore = cartItems.size();
+        
         removeButton.click();
+        
+        // Wait for the cart item to be actually removed from DOM
+        try {
+            int maxWait = 5; // Wait up to 5 seconds
+            for (int i = 0; i < maxWait; i++) {
+                Thread.sleep(500);
+                // Re-find elements to get fresh state
+                List<WebElement> currentItems = driver.findElements(By.className("cart_item"));
+                if (currentItems.size() < countBefore) {
+                    break; // Item has been removed
+                }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean verifyAllQuantitiesAreOne() {
@@ -44,9 +66,16 @@ public class CartPage extends BasePage {
 
     public int getCartItemCount() {
         try {
-            return Integer.parseInt(shoppingCartBadge.getText());
+            // Always get fresh count by querying the DOM directly
+            List<WebElement> items = driver.findElements(By.className("cart_item"));
+            return items.size();
         } catch (Exception e) {
-            return 0;
+            // Fallback to badge if cart_item elements are not found
+            try {
+                return Integer.parseInt(shoppingCartBadge.getText());
+            } catch (Exception ex) {
+                return 0;
+            }
         }
     }
 }

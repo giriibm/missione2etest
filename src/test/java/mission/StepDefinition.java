@@ -45,8 +45,8 @@ public class StepDefinition extends iniClass {
     @And("^I  should see (\\d+) items added to the shopping cart$")
     public void iShouldSeeItemsInCart(int expectedCount) {
         try {
-            // Small wait to ensure cart badge updates
-            Thread.sleep(500);
+            // Wait to ensure cart badge updates
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -45,8 +45,8 @@ formatter.match({
   "location": "StepDefinition.iGetTheDefaultListofusers()"
 });
 formatter.result({
-  "duration": 1585646544,
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)\n\tat ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:131)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:570)\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:170)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:790)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:143)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:763)\n\tat org.testng.TestRunner.run(TestRunner.java:594)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:398)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:392)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1146)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1067)\n\tat org.testng.TestNG.runSuites(TestNG.java:997)\n\tat org.testng.TestNG.run(TestNG.java:965)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+  "duration": 1842606556,
+  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)\n\tat ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1510)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
   "status": "failed"
 });
 formatter.match({
@@ -105,15 +105,15 @@ formatter.match({
   "location": "StepDefinition.iMakeASearchForUser(String)"
 });
 formatter.result({
-  "duration": 4236064757,
+  "duration": 242751962,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.IShouldSeeFollowingUserData(DataTable)"
 });
 formatter.result({
-  "duration": 2091465,
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getString(JsonPath.java:352)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)\n\tat ✽.Then I should see the following user data(src/test/java/API-Test.feature:13)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getString(JsonPath.java:352)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:131)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:570)\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:170)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:790)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:143)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:763)\n\tat org.testng.TestRunner.run(TestRunner.java:594)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:398)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:392)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1146)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1067)\n\tat org.testng.TestNG.runSuites(TestNG.java:997)\n\tat org.testng.TestNG.run(TestNG.java:965)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+  "duration": 1801868,
+  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getString(JsonPath.java:352)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)\n\tat ✽.Then I should see the following user data(src/test/java/API-Test.feature:13)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getString(JsonPath.java:352)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1510)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
   "status": "failed"
 });
 formatter.scenario({
@@ -144,7 +144,7 @@ formatter.match({
   "location": "StepDefinition.iMakeASearchForUser(String)"
 });
 formatter.result({
-  "duration": 222108925,
+  "duration": 221405087,
   "status": "passed"
 });
 formatter.match({
@@ -157,8 +157,8 @@ formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(int)"
 });
 formatter.result({
-  "duration": 2067588,
-  "error_message": "java.lang.AssertionError: Response code does not match expected [404] but found [403]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:118)\n\tat org.testng.Assert.assertEquals(Assert.java:839)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:162)\n\tat ✽.Then I receive error code 404 in response(src/test/java/API-Test.feature:20)\n",
+  "duration": 7656682,
+  "error_message": "java.lang.AssertionError: Response code does not match expected [404] but found [403]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:162)\n\tat ✽.Then I receive error code 404 in response(src/test/java/API-Test.feature:20)\n",
   "status": "failed"
 });
 formatter.scenarioOutline({
@@ -276,14 +276,14 @@ formatter.match({
   "location": "StepDefinition.iCreateUserWithFollowing(String,String)"
 });
 formatter.result({
-  "duration": 230956462,
+  "duration": 217693941,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(DataTable)"
 });
 formatter.result({
-  "duration": 372773,
+  "duration": 338485,
   "error_message": "java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0\n\tat java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)\n\tat java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)\n\tat java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)\n\tat java.base/java.util.Objects.checkIndex(Objects.java:373)\n\tat java.base/java.util.ArrayList.get(ArrayList.java:426)\n\tat java.base/java.util.Collections$UnmodifiableList.get(Collections.java:1321)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:179)\n\tat ✽.Then response should contain the following data(src/test/java/API-Test.feature:25)\n",
   "status": "failed"
 });
@@ -340,14 +340,14 @@ formatter.match({
   "location": "StepDefinition.iCreateUserWithFollowing(String,String)"
 });
 formatter.result({
-  "duration": 257387577,
+  "duration": 188534344,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(DataTable)"
 });
 formatter.result({
-  "duration": 239928,
+  "duration": 232698,
   "error_message": "java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0\n\tat java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)\n\tat java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)\n\tat java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)\n\tat java.base/java.util.Objects.checkIndex(Objects.java:373)\n\tat java.base/java.util.ArrayList.get(ArrayList.java:426)\n\tat java.base/java.util.Collections$UnmodifiableList.get(Collections.java:1321)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:179)\n\tat ✽.Then response should contain the following data(src/test/java/API-Test.feature:25)\n",
   "status": "failed"
 });
@@ -389,7 +389,7 @@ formatter.match({
   "location": "StepDefinition.iLoginSuccessfullyWithFollowingData(DataTable)"
 });
 formatter.result({
-  "duration": 228628353,
+  "duration": 197611863,
   "status": "passed"
 });
 formatter.match({
@@ -402,8 +402,8 @@ formatter.match({
   "location": "StepDefinition.iShouldGetAResponseCodeOf(int)"
 });
 formatter.result({
-  "duration": 286954,
-  "error_message": "java.lang.AssertionError: Response code does not match expected [200] but found [403]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:118)\n\tat org.testng.Assert.assertEquals(Assert.java:839)\n\tat mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)\n\tat ✽.Then I should get a response code of 200(src/test/java/API-Test.feature:38)\n",
+  "duration": 229520,
+  "error_message": "java.lang.AssertionError: Response code does not match expected [200] but found [403]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)\n\tat ✽.Then I should get a response code of 200(src/test/java/API-Test.feature:38)\n",
   "status": "failed"
 });
 formatter.scenario({
@@ -457,7 +457,7 @@ formatter.match({
   "location": "StepDefinition.iLoginUnsuccessfullyWithFollowingData(DataTable)"
 });
 formatter.result({
-  "duration": 230768462,
+  "duration": 220569967,
   "status": "passed"
 });
 formatter.match({
@@ -470,8 +470,8 @@ formatter.match({
   "location": "StepDefinition.iShouldGetAResponseCodeOf(int)"
 });
 formatter.result({
-  "duration": 232689,
-  "error_message": "java.lang.AssertionError: Response code does not match expected [400] but found [403]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:118)\n\tat org.testng.Assert.assertEquals(Assert.java:839)\n\tat mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)\n\tat ✽.Then I should get a response code of 400(src/test/java/API-Test.feature:44)\n",
+  "duration": 242976,
+  "error_message": "java.lang.AssertionError: Response code does not match expected [400] but found [403]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)\n\tat ✽.Then I should get a response code of 400(src/test/java/API-Test.feature:44)\n",
   "status": "failed"
 });
 formatter.match({
@@ -502,8 +502,8 @@ formatter.match({
   "location": "StepDefinition.iWaitForUserListToLoad()"
 });
 formatter.result({
-  "duration": 226850904,
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getList(JsonPath.java:375)\n\tat mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)\n\tat ✽.Given I wait for the user list to load(src/test/java/API-Test.feature:49)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getList(JsonPath.java:375)\n\tat mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:131)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:570)\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:170)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:790)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:143)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:763)\n\tat org.testng.TestRunner.run(TestRunner.java:594)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:398)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:392)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1146)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1067)\n\tat org.testng.TestNG.runSuites(TestNG.java:997)\n\tat org.testng.TestNG.run(TestNG.java:965)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+  "duration": 214429398,
+  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getList(JsonPath.java:375)\n\tat mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)\n\tat ✽.Given I wait for the user list to load(src/test/java/API-Test.feature:49)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getList(JsonPath.java:375)\n\tat mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1510)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
   "status": "failed"
 });
 formatter.match({
@@ -527,7 +527,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2514668326,
+  "duration": 2055789829,
   "status": "passed"
 });
 formatter.scenario({
@@ -547,11 +547,11 @@ formatter.match({
   "location": "StepDefinition.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 561024337,
+  "duration": 780804338,
   "status": "passed"
 });
 formatter.after({
-  "duration": 360972955,
+  "duration": 573369900,
   "status": "passed"
 });
 formatter.uri("src/test/java/UI-Test.feature");
@@ -569,7 +569,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 1408244537,
+  "duration": 1574414740,
   "status": "passed"
 });
 formatter.scenario({
@@ -709,21 +709,21 @@ formatter.match({
   "location": "StepDefinition.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 1600140416,
+  "duration": 701426921,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iLoginWithFollowingDetails(DataTable)"
 });
 formatter.result({
-  "duration": 496236892,
+  "duration": 449950458,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iAddFollowingItemsToBasket(String\u003e)"
 });
 formatter.result({
-  "duration": 276634481,
+  "duration": 248881648,
   "status": "passed"
 });
 formatter.match({
@@ -736,14 +736,14 @@ formatter.match({
   "location": "StepDefinition.iShouldSeeItemsInCart(int)"
 });
 formatter.result({
-  "duration": 526012972,
+  "duration": 1025891203,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnShoppingCart()"
 });
 formatter.result({
-  "duration": 51804325,
+  "duration": 58375174,
   "status": "passed"
 });
 formatter.match({
@@ -756,14 +756,14 @@ formatter.match({
   "location": "StepDefinition.iVerifyQtyCountForEachItem(int)"
 });
 formatter.result({
-  "duration": 20008416169,
+  "duration": 59032615,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iRemoveFollowingItem(String\u003e)"
 });
 formatter.result({
-  "duration": 51522899,
+  "duration": 583586214,
   "status": "passed"
 });
 formatter.match({
@@ -776,15 +776,15 @@ formatter.match({
   "location": "StepDefinition.iShouldSeeItemsInCart(int)"
 });
 formatter.result({
-  "duration": 520927002,
-  "error_message": "java.lang.AssertionError: Cart item count mismatch expected [3] but found [4]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:118)\n\tat org.testng.Assert.assertEquals(Assert.java:839)\n\tat mission.StepDefinition.iShouldSeeItemsInCart(StepDefinition.java:61)\n\tat ✽.And I  should see 3 items added to the shopping cart(src/test/java/UI-Test.feature:22)\n",
-  "status": "failed"
+  "duration": 1022364788,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnCheckoutButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 59424310,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -796,7 +796,8 @@ formatter.match({
   "location": "StepDefinition.iTypeForFirstName(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 109412880,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -808,7 +809,8 @@ formatter.match({
   "location": "StepDefinition.iTypeForLastName(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 88918693,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -820,19 +822,22 @@ formatter.match({
   "location": "StepDefinition.iTypeForPostalCode(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 86136058,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnContinueButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 66981980,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.itemTotalWillBeEqualToTotalOfItems()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 75312936,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -844,10 +849,11 @@ formatter.match({
   "location": "StepDefinition.aTaxRateIsApplied(double)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 33397096,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 729772611,
+  "duration": 515465190,
   "status": "passed"
 });
 });
