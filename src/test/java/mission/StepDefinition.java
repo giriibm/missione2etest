@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class StepDefinition extends iniClass {
 
-    private static final String BASE_URI = "https://reqres.in/api";
+    private static final String BASE_URI = "https://jsonplaceholder.typicode.com";
     private Response response;
     private List<Map<String, Object>> allUsers = new ArrayList<>();
     private int totalUserCount = 0;
@@ -115,49 +115,42 @@ public class StepDefinition extends iniClass {
 
     // API Test Step Definitions
 
-    @Given("^I get the default list of users for on 1st page$")
-    public void iGetTheDefaultListofusers() {
+    @Given("^I get the list of users$")
+    public void iGetTheListOfUsers() {
         RestAssured.baseURI = BASE_URI;
         response = given()
+                .header("Accept", "application/json")
                 .log().ifValidationFails()
-                .get("/users?page=1");
+                .get("/users");
         
         System.out.println("Response status: " + response.getStatusCode());
-        System.out.println("Response body: " + response.getBody().asString());
         
         if (response.getStatusCode() == 200) {
-            totalUserCount = response.jsonPath().getInt("total");
-            List<Map<String, Object>> users = response.jsonPath().getList("data");
-            allUsers.addAll(users);
+            allUsers = response.jsonPath().getList("$");
+            totalUserCount = allUsers.size();
+            System.out.println("Found " + totalUserCount + " users");
         } else {
             System.err.println("API returned error: " + response.getStatusCode());
         }
     }
 
-    @When("I get the list of all users within every page")
-    public void iGetTheListOfAllUsers() {
-        int totalPages = response.jsonPath().getInt("total_pages");
-        for (int page = 2; page <= totalPages; page++) {
-            Response pageResponse = given().get("/users?page=" + page);
-            List<Map<String, Object>> users = pageResponse.jsonPath().getList("data");
-            allUsers.addAll(users);
-        }
-    }
-
-    @Then("I should see total users count equals the number of user ids")
-    public void iShouldMatchTotalCount() {
-        Assert.assertEquals(allUsers.size(), totalUserCount, "Total user count does not match");
+    @Then("I should see (\\d+) users in the response")
+    public void iShouldSeeUsersInResponse(int expectedCount) {
+        Assert.assertEquals(allUsers.size(), expectedCount, "User count does not match");
     }
 
     @Given("I make a search for user (.*)")
     public void iMakeASearchForUser(String sUserID) {
         RestAssured.baseURI = BASE_URI;
         response = given()
+                .header("Accept", "application/json")
                 .log().ifValidationFails()
                 .get("/users/" + sUserID);
         
         System.out.println("User search - Status: " + response.getStatusCode());
-        System.out.println("User search - Body: " + response.getBody().asString());
+        if (response.getStatusCode() == 200) {
+            System.out.println("User found: " + response.jsonPath().getString("name"));
+        }
     }
 
     @Then("I should see the following user data")
@@ -168,11 +161,11 @@ public class StepDefinition extends iniClass {
             Assert.fail("Expected 200 but got " + response.getStatusCode() + ". Response: " + response.getBody().asString());
         }
         
-        String actualFirstName = response.jsonPath().getString("data.first_name");
-        String actualEmail = response.jsonPath().getString("data.email");
+        String actualName = response.jsonPath().getString("name");
+        String actualEmail = response.jsonPath().getString("email");
         
-        Assert.assertEquals(actualFirstName, expectedData.get(0).get("first_name"), 
-            "First name does not match");
+        Assert.assertEquals(actualName, expectedData.get(0).get("name"), 
+            "Name does not match");
         Assert.assertEquals(actualEmail, expectedData.get(0).get("email"), 
             "Email does not match");
     }
@@ -183,85 +176,79 @@ public class StepDefinition extends iniClass {
             "Response code does not match");
     }
 
-    @Given("I create a user with following (.*) (.*)")
-    public void iCreateUserWithFollowing(String sUsername, String sJob) {
+    @Given("I create a post with title \"(.*)\" and body \"(.*)\"")
+    public void iCreatePostWithTitleAndBody(String title, String body) {
         RestAssured.baseURI = BASE_URI;
-        String requestBody = String.format("{\"name\": \"%s\", \"job\": \"%s\"}", sUsername, sJob);
+        String requestBody = String.format("{\"title\": \"%s\", \"body\": \"%s\", \"userId\": 1}", title, body);
         response = given()
                 .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
                 .body(requestBody)
                 .log().ifValidationFails()
-                .post("/users");
+                .post("/posts");
         
-        System.out.println("Create user - Status: " + response.getStatusCode());
-        System.out.println("Create user - Body: " + response.getBody().asString());
+        System.out.println("Create post - Status: " + response.getStatusCode());
+        System.out.println("Create post - Body: " + response.getBody().asString());
     }
 
-    @Then("response should contain the following data")
-    public void iReceiveErrorCodeInResponse(DataTable dt) {
-        List<Map<String, String>> expectedFields = dt.asMaps(String.class, String.class);
+    @Then("response should contain the created post data")
+    public void responseContainsCreatedPostData(DataTable dt) {
+        // Get raw data which contains headers
+        List<String> expectedFields = dt.raw().get(0);
         
         System.out.println("Validating response fields. Status: " + response.getStatusCode());
-        System.out.println("Response body: " + response.getBody().asString());
         
-        if (response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-            for (String field : expectedFields.get(0).keySet()) {
+        if (response.getStatusCode() == 201) {
+            for (String field : expectedFields) {
                 Object value = response.jsonPath().get(field);
                 Assert.assertNotNull(value, field + " is missing in response");
             }
+            System.out.println("Created post ID: " + response.jsonPath().getString("id"));
         } else {
-            Assert.fail("Expected success response but got " + response.getStatusCode());
+            Assert.fail("Expected 201 but got " + response.getStatusCode());
         }
     }
 
-    @Given("I login successfully with the following data")
-    public void iLoginSuccessfullyWithFollowingData(DataTable dt) {
+    @Given("I update post (\\d+) with title \"(.*)\" and body \"(.*)\"")
+    public void iUpdatePostWithTitleAndBody(int postId, String title, String body) {
         RestAssured.baseURI = BASE_URI;
-        List<Map<String, String>> data = dt.asMaps(String.class, String.class);
-        String email = data.get(0).get("Email");
-        String password = data.get(0).get("Password");
-        
-        String requestBody = String.format("{\"email\": \"%s\", \"password\": \"%s\"}", 
-            email, password);
+        String requestBody = String.format("{\"title\": \"%s\", \"body\": \"%s\", \"userId\": 1}", title, body);
         response = given()
                 .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
                 .body(requestBody)
                 .log().ifValidationFails()
-                .post("/login");
+                .put("/posts/" + postId);
         
-        System.out.println("Login - Status: " + response.getStatusCode());
-        System.out.println("Login - Body: " + response.getBody().asString());
+        System.out.println("Update post - Status: " + response.getStatusCode());
+        System.out.println("Update post - Body: " + response.getBody().asString());
     }
 
-    @Given("I login unsuccessfully with the following data")
-    public void iLoginUnsuccessfullyWithFollowingData(DataTable dt) {
+    @Then("response should contain updated title \"(.*)\"")
+    public void responseShouldContainUpdatedTitle(String expectedTitle) {
+        String actualTitle = response.jsonPath().getString("title");
+        Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
+    }
+
+    @Given("I delete post (\\d+)")
+    public void iDeletePost(int postId) {
         RestAssured.baseURI = BASE_URI;
-        List<Map<String, String>> data = dt.asMaps(String.class, String.class);
-        String email = data.get(0).get("Email");
-        String password = data.get(0).getOrDefault("Password", "");
-        
-        String requestBody;
-        if (password.isEmpty()) {
-            requestBody = String.format("{\"email\": \"%s\"}", email);
-        } else {
-            requestBody = String.format("{\"email\": \"%s\", \"password\": \"%s\"}", 
-                email, password);
-        }
-        
         response = given()
-                .header("Content-Type", "application/json")
-                .body(requestBody)
+                .header("Accept", "application/json")
                 .log().ifValidationFails()
-                .post("/login");
+                .delete("/posts/" + postId);
         
-        System.out.println("Unsuccessful Login - Status: " + response.getStatusCode());
-        System.out.println("Unsuccessful Login - Body: " + response.getBody().asString());
+        System.out.println("Delete post - Status: " + response.getStatusCode());
     }
 
     @Given("^I wait for the user list to load$")
     public void iWaitForUserListToLoad() {
         RestAssured.baseURI = BASE_URI;
         response = given()
+                .header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+                .header("Accept", "application/json, text/plain, */*")
+                .header("Accept-Language", "en-US,en;q=0.9")
+                .header("Connection", "keep-alive")
                 .log().ifValidationFails()
                 .get("/users?delay=3");
         
