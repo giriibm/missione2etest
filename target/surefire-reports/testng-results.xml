@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-22T23:18:37 ICT" name="Surefire suite" finished-at="2026-01-22T23:18:51 ICT" duration-ms="14058">
+  <suite started-at="2026-01-22T23:22:32 ICT" name="Surefire suite" finished-at="2026-01-22T23:22:47 ICT" duration-ms="14767">
     <groups>
       <group name="cucumber">
         <method signature="RunnerTest.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" name="feature" class="mission.RunnerTest"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-22T23:18:37 ICT" name="Surefire test" finished-at="2026-01-22T23:18:51 ICT" duration-ms="14058">
+    <test started-at="2026-01-22T23:22:32 ICT" name="Surefire test" finished-at="2026-01-22T23:22:47 ICT" duration-ms="14767">
       <class name="mission.RunnerTest">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:18:37 ICT" name="setUpClass" finished-at="2026-01-22T23:18:37 ICT" duration-ms="183" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:22:32 ICT" name="setUpClass" finished-at="2026-01-22T23:22:33 ICT" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:18:38 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:18:41 ICT" duration-ms="3148" status="FAIL">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:22:33 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:22:36 ICT" duration-ms="2927" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -145,7 +145,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:18:41 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:18:44 ICT" duration-ms="3504" status="PASS">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:22:36 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:22:39 ICT" duration-ms="3700" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -156,7 +156,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:18:44 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:18:51 ICT" duration-ms="6971" status="PASS">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:22:39 ICT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2026-01-22T23:22:47 ICT" duration-ms="7785" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,7 +167,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:18:51 ICT" name="tearDownClass" finished-at="2026-01-22T23:18:51 ICT" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:mission.RunnerTest@433d61fb]" started-at="2026-01-22T23:22:47 ICT" name="tearDownClass" finished-at="2026-01-22T23:22:47 ICT" duration-ms="96" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 456352049,
+  "duration": 444541824,
   "status": "passed"
 });
 formatter.scenario({
@@ -67,14 +67,14 @@ formatter.match({
   "location": "StepDefinition.iGetTheDefaultListofusers()"
 });
 formatter.result({
-  "duration": 1351532410,
+  "duration": 1164755739,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iGetTheListOfAllUsers()"
 });
 formatter.result({
-  "duration": 53766912,
+  "duration": 55817571,
   "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)\n\tat ✽.When I get the list of all users within every page(src/test/java/API-Test.feature:10)\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:202)\n\tat io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)\n\tat mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\n\tat mission.RunnerTest.feature(RunnerTest.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1510)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
   "status": "failed"
 });
@@ -85,7 +85,7 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 616320,
+  "duration": 324338,
   "status": "passed"
 });
 formatter.scenario({
@@ -142,19 +142,19 @@ formatter.match({
   "location": "StepDefinition.iMakeASearchForUser(String)"
 });
 formatter.result({
-  "duration": 163402393,
+  "duration": 210088157,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.IShouldSeeFollowingUserData(DataTable)"
 });
 formatter.result({
-  "duration": 2634436,
-  "error_message": "java.lang.AssertionError: Expected 200 but got 403. Response: \u003c!DOCTYPE html\u003e\u003chtml lang\u003d\"en-US\"\u003e\u003chead\u003e\u003ctitle\u003eJust a moment...\u003c/title\u003e\u003cmeta http-equiv\u003d\"Content-Type\" content\u003d\"text/html; charset\u003dUTF-8\"\u003e\u003cmeta http-equiv\u003d\"X-UA-Compatible\" content\u003d\"IE\u003dEdge\"\u003e\u003cmeta name\u003d\"robots\" content\u003d\"noindex,nofollow\"\u003e\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width,initial-scale\u003d1\"\u003e\u003cstyle\u003e*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width \u003c\u003d 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width \u003c\u003d 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}\u003c/style\u003e\u003cmeta http-equiv\u003d\"refresh\" content\u003d\"360\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv class\u003d\"main-wrapper\" role\u003d\"main\"\u003e\u003cdiv class\u003d\"main-content\"\u003e\u003cnoscript\u003e\u003cdiv class\u003d\"h2\"\u003e\u003cspan id\u003d\"challenge-error-text\"\u003eEnable JavaScript and cookies to continue\u003c/span\u003e\u003c/div\u003e\u003c/noscript\u003e\u003c/div\u003e\u003c/div\u003e\u003cscript\u003e(function(){window._cf_chl_opt \u003d {cvId: \u00273\u0027,cZone: \u0027reqres.in\u0027,cType: \u0027managed\u0027,cRay: \u00279c205e59dc04a24f\u0027,cH: \u00275PB2phw0SgTVcv3A2Gh57cMoqF9arFkxCdT8xrsFrLc-1769098720-1.2.1.1-VdzZVsp49exV1_mmvicIgzFN98XXMxThW_.6IWMhnQEFaU3wlb4QcxoVBzM_wSim\u0027,cUPMDTk:\"\\/api\\/users\\/3?__cf_chl_tk\u003dWGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k\",cFPWv: \u0027b\u0027,cITimeS: \u00271769098720\u0027,cTplC:0,cTplV:5,cTplB: \u00270\u0027,fa:\"\\/api\\/users\\/3?__cf_chl_f_tk\u003dWGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k\",md: \u0027eiQlVftGt8KcY7ekxp21M2i5gJ6txasq1foOC6HlCV8-1769098720-1.2.1.1-QKaIODcEZ8wuZPPk320mWKgwpK2qtFkmGGo5b9Lxc1FeRam47z8tC1u.RSq0QXoQbGGYEo.Tz5yBDVRSpKXKwROQPyPaeg9NTU8nBSRslQ3Hj.vxwXqJxHkMCVUjYIF1k3KeKI4P7l_psly.oUl5kPUWH_us7VNLcSjZRHYiXZWdZxr3rPTjHaaWudrMvMu2JYgBJ.yAyXmzZLmOJoUlgcXZCp9tqn1_TI5.xQOK33GWT2ygil6nOoLp1Es1W66XpMrgljpfWz3VjMdWlITRMuPVGrMEcGWuS3TFXJjN5JbwhUasx0LsdCfMT0Lvta2aeO1r8RcsrYB3TkDrKUEbmegLu.U4wZ1EOWeAZ8gTyon7JuSXgrBAyjx0IwyrNz6jG5hO8amLkXr7WEhSZn.d0WBxkB61PBs_L41UcpNqc_jyCZ.yntzLjiRH0xUpOc3cTVFC9aPx2_3ZO_qCsd62U1KUwWAJmTU.MrnHQdmOysV11Yvx1laDkkLzWuRa9kxPcC_m25bISUjrGrYZ7UblOa63UvcTUOHamfHSX.nP12BvOKza3jLgnbO_fcJ_J0m7NbWoWDRUGMQlDrJva94_9XoJmbaV.xGnKR9lNA771Gc3yggQh5O0PkGcjqcrpi5cNBr3_DWbOLctjo5CXxevKP1en0LuPAQ3_WAOeGX1WJP4GTt69M0j_sgKHr1_QWA5e1kMNm0DX_QSVv4Jk.BmfQA5gCxGtwTFLyPiqVxbKd2uYZ_mOJSZvuiNKY.rZNsXrlB0a5wzxHKkiwO9mPYMqTSaLUxRpRlUafHb0afv.wXP3L.ItxGyBGDVEYyCbduYQ8mwKX.u5uSDXbZtXqRcaM5CUwWk_yOs02g__NFuFOspnBFvJbNU21ZytbLB2g2fap6YxA7OdpxKg.tpNAmzUQrx.oBBRRPhKnGi4Gt9ycFvzxH6J7iF0cfY8LXdpOuo\u0027,mdrd: \u0027vrAHclhKerM52Tvt7M3A4viK75sH2Dt8bmPS8jUf8z0-1769098720-1.2.1.1-oGoYZzV92Pki6Ey0HM_nlgzDObjDiHGWXkJlmXd7V1rmuOOnlO50EamonUQEe4UPyJ_txbntFC50AQusZkU1lr4tM16BpfAzMIGdRuSc_y.IAUN5xGHZ5usaYw7FseKCBASi5oUeLuSuRdpLTctEBmanLvnlwJ6r3COwWcfh5KXgD2rV8jI1BasKISTQdGhVue5OrGdzWciDcbqeGdp3Tqe8dsduhATWehKWzrrRn4Z5pkquf3dEPORrzEMH5ZFGr7uPztBcu9hnnrXI6dOQjB7i4ShrbLpt2HVjzOr6dlkYzEWK0Yrf_aIHlrD5MdiY5HYERA3Ivh3hV5SQ6re7FbFcL8fIt_hdu.8fIE1YLNI.asuVZ3J8w.nj1XZNMF33LFZRmnT7nllDrUaDdHuoLpQtcffCw9QlNuCXgeaOyQv8QdfhUfzeXrg1UOWek.oSijPy0PUP_TyeCv_TwVBzgGKFsbp.XlqaEqNQ71fPrc7GhSc2d_dOr0Tg5TT617eBevVZ0bOalCvQ1WBH3ttNrq8XS7V4e0mOaNJ19jnAtFSz1dJmdodB_1ynr9tfI1WEyKTo0pLZtNszwHir4Bpm08IbgNT6dMIQiEQcjxnDIeGbjfQJXpXHdGlIJ2h5PEYU62blHBPzdtvpxzWs.b6J.TkrZ0vopXd6nIY6ClOGm3UN8kEC1MTKCFRhmDkU7EeyoQq0mhOd2xB9htUD001z3CAS7I.aQ_OgcDr01mZBblgRaEtwh8yl9tZB2MC0wa1dYMhl1MSxbb4jg63Ebq39BuCzmrfzZ2pmWqMlO0c6nEiwxPb0X.6g_DiIlvKDrZYFUrMVHU3u3DZrehWkR.nzaKntXXoXVKbNTIF8mOyzgOEbyUZdG3l9ikRWL6UYAuLDuLALCHqtd_Pmz0RucpSWjJPZjiFiqdCgflutd8kqIoP8eGyaIlliUToYlZ8coLyQ8x9tg0i4WZgS4chIyWkHGQ4mD9tMGccOTGTmlQwKETafQyg4KgV9.r2VJKTfxJ19uYKeCi2dUyAiO5qOa0RuoVOTlQGNy9ZexhTTR9zgw4QbHnMKfDwZf0qX7laqtHhEC48djCoaBFisohJJEX8N86jhIr9uhNRY6BoSTqszEPCffF.NzPtr0MGLi.QOw0..L33T8GVAQkKxFIsxzwXRkY8tfjKTuwtzBX.VA5SEZXLnenKQcsVEO2DsqjM84NxELw8iBZh2wsM.ZKdTAoOp9fJnx62T5al4rBT5FzXu.ipxTR.UBxtTQZlyf0jlnz38V0mphJiloMIC.LC2BkmtvA_V3OMJ5YLHmhCDZSuhwPIe4W362rsOeaHQgWniXrxRMW9VIo.Z5_q30IYgqMDCqTAwhiTkU0BL_Eu9BpomY7yfbS5zxe3iaOSan4Wet3gCjZa1_dC3B22w9Y.juS9iFcdl9F1Q64js16WOM5Yn6Oor2tG0GqZpwaUzlwMcVpa8WYNP85yMwN9LUhmbDWCcGNbVQV3GxWfK3aAy46M2D2sD.Xn705S.2pYC.hzPGRjM5BNaom5UJNvbyHLkr6z2Up_N6vBK_N1lERW.RYHo.A47p.nVaCsIXCF9P4EE24xNbyiNKZAh6ukRGms_hUdoMSnRF766Dt9EUo62iZjlzXMgAREKuntHETJNpCIpC00rOM8.JO_hhzXLI4cdpJS9xCzVbOz5qTmceoVxnkZTnmI97eieQkwtvABBPOiQQNbJ8uVd1ldDgVhv.4gtdp6MfR7BOe7oc.a5qHBdKQJeeDm2tVQkfcLd4xzDf7tsAK15CdxrVJ46hoIfG.f7es0i6Dvs2jrXTjDbVxfrbPagUUsMR1XGAoP5oNXpkHt9DVxZPEwornJURCeCW_T6zNRASAv2iansUjZUmVgVUKIlI0fq0EnLP12ucTlOwwqjVchHJngD.b8ki841WriOvtwG4qJjrP_Ik5J8hQxNMDxZFaxGU.MUM1qA7dV277nBBPtwopFKsaEPTH17nl04n3kpZCyS9u2wRH22ZeiAbEeEmbCAvtutg94.NvSoLjj8sD3u2xsDlfD3_6nNUaIyA8GCJyUWJfSeGa0GOf_QDIS5HKFJdYes9EqyVt_u3iaKQAzxcl4DEL67BMMqsCAnQVInRQVZknjdS3kyYcqROhkw5Ee4vcqbqVP64U9E42ZT7g5FkqM6a9QtMxuZDc75QuXNkcReYwz1jKena0SPbkV5mXpY7gbwThzS.FulEbeJ_doPK0AHx_wIufzVcGqKNiFiYpCndu0v8IcAleRZVl85tjumihLBx57C4ageW5fMq7cUKjlliY6TlldDIq6MRPbWA_4ODW7o3zTyPgGfvUV4mACOfsUMQnRQ9elQQZSm5TMcmQ683Mfe.yD62CPWwS3O_0cTv464hF0kecFka2bJodHm9_RHnJp7QTpLShugad7lsF32h9bZkAgHcE7gSn9iNw\u0027,};var a \u003d document.createElement(\u0027script\u0027);a.src \u003d \u0027/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray\u003d9c205e59dc04a24f\u0027;window._cf_chl_opt.cOgUHash \u003d location.hash \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.indexOf(\u0027#\u0027) !\u003d\u003d -1 ? \u0027#\u0027 : location.hash;window._cf_chl_opt.cOgUQuery \u003d location.search \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(\u0027?\u0027) !\u003d\u003d -1 ? \u0027?\u0027 : location.search;if (window.history \u0026\u0026 window.history.replaceState) {var ogU \u003d location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"\\/api\\/users\\/3?__cf_chl_rt_tk\u003dWGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k\"+ window._cf_chl_opt.cOgUHash);a.onload \u003d function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(\u0027head\u0027)[0].appendChild(a);}());\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:168)\n\tat ✽.Then I should see the following user data(src/test/java/API-Test.feature:16)\n",
+  "duration": 2404785,
+  "error_message": "java.lang.AssertionError: Expected 200 but got 403. Response: \u003c!DOCTYPE html\u003e\u003chtml lang\u003d\"en-US\"\u003e\u003chead\u003e\u003ctitle\u003eJust a moment...\u003c/title\u003e\u003cmeta http-equiv\u003d\"Content-Type\" content\u003d\"text/html; charset\u003dUTF-8\"\u003e\u003cmeta http-equiv\u003d\"X-UA-Compatible\" content\u003d\"IE\u003dEdge\"\u003e\u003cmeta name\u003d\"robots\" content\u003d\"noindex,nofollow\"\u003e\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width,initial-scale\u003d1\"\u003e\u003cstyle\u003e*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width \u003c\u003d 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width \u003c\u003d 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}\u003c/style\u003e\u003cmeta http-equiv\u003d\"refresh\" content\u003d\"360\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv class\u003d\"main-wrapper\" role\u003d\"main\"\u003e\u003cdiv class\u003d\"main-content\"\u003e\u003cnoscript\u003e\u003cdiv class\u003d\"h2\"\u003e\u003cspan id\u003d\"challenge-error-text\"\u003eEnable JavaScript and cookies to continue\u003c/span\u003e\u003c/div\u003e\u003c/noscript\u003e\u003c/div\u003e\u003c/div\u003e\u003cscript\u003e(function(){window._cf_chl_opt \u003d {cvId: \u00273\u0027,cZone: \u0027reqres.in\u0027,cType: \u0027managed\u0027,cRay: \u00279c2064153c05d76d\u0027,cH: \u0027VD.8Kll8fC.PYfy6hUxuh2PyPs8U5tRC1m6nNRDElLo-1769098955-1.2.1.1-dc6P33zSTEQFOa52i8zjSyJiSdTMvSbqWTcX5GNhelWsKCNb1lmDLZ6fTgOzbUV9\u0027,cUPMDTk:\"\\/api\\/users\\/3?__cf_chl_tk\u003deOub1aE6STDMaqJtT4GWfKJZ3J1LanMwQC9bE_LRre4-1769098955-1.0.1.1-K0A4uOhIiHwMx91Vii123KXHFZiVBu4ejK.9Jmaj01k\",cFPWv: \u0027b\u0027,cITimeS: \u00271769098955\u0027,cTplC:0,cTplV:5,cTplB: \u00270\u0027,fa:\"\\/api\\/users\\/3?__cf_chl_f_tk\u003deOub1aE6STDMaqJtT4GWfKJZ3J1LanMwQC9bE_LRre4-1769098955-1.0.1.1-K0A4uOhIiHwMx91Vii123KXHFZiVBu4ejK.9Jmaj01k\",md: \u0027CvMRaf_zHMdm3rHCgPTPK68dT_l8HDtD7nW5WJwyp9A-1769098955-1.2.1.1-1E6wp9lVoZWO9SMENO11WPqdrql42zp7tTXD7Hv1iJEZ0U3mDKwKo_7T6ug82HsbCRgS1YZ4nw01vUocQaj4j7clW0pwSMq_LtXd7oPXcs8ar3zwBiiBQGZttCRLHJUwcDveHXLcsQpwnkb8m5Pdo6PQyogUtv6TIfhOQwJBf40RzCItKln6HN39hhEcM73Hm.GnLYscsABP1CMk22vwa7OKaau4uVmKzDztDrBcjJaj9fMo6oBru0VFz5h5gCoAc7h3nQ8UsH5mQ7IDFVegWvbOsmu9hGqwO1AdLNqEdomGwTeSzWCOyk.z8ASsI47aChYdqYshuaIOlGAJ91kJfynlse.1vFrZSfYLnXIJkU2Ijg0fyWkzOTevzwMpebY2r10.l_CGxOjzUofarjswNM_uNefTq4HojRPwpzEz4diqnPU6czeGdEExc1gGZbvFNogAkycDNHmIXb6bvlpS2ys7rQXzhbXJ_YMvl.Rcmj37NgHrWm0apRUz6cadKEcjeh1Wc8X04gc37fvVrALXxr.n0jKw63Y7afrQRH8Km3_ns6SSf6yySKFkq7YCCZgbxcipIUdl9tVOsNIgzrNOL5vGnUSumagDIXpXTKtGAIl17GLqWORLi7dGFQPfMrTpnJlK.KLwqR4G0EOKtXZnZYmsLfbTdPZbMDZr9POL8CiafvdmpbNLfBgJXLv.Py9_KS6.eg6_1Jd9hwyLkt3dBJe4TPgRsSnUWZ8hzn8IhJZ8_ny1E_iofj1g2w5ghfFor.sowRFS6az9MRGLtoz797si84cr85jLCVxfQwIYJohbnQnoy3Um9moRZLrl6wI8POGpRUuBrzwU0x3IvPy3boFnTglqAsKfTp4iMgYKPbk4nX5j8dXUdhMyKTBgYFO.VJ6ocYQb5jMTc25GOnkthdEJN4PZuELnbuxDKrWHck9ow5o3IJ3axsppEXGSYKqr\u0027,mdrd: \u0027seqJ2W8USUIr6HEaNGwVEhWWy5KvHJNeBb9owQfWVPo-1769098955-1.2.1.1-WmVAMqnit1.iL0rBazkpvX6YmM5BcE_LWXHVOV_ogXJE.Y8JHJsHnPy59OtXKSeoV6Uuqs5E0eeIhbBCfzPubesoinx9Bc2td9MV4pKjUEeUHDX.JfZ.cWk5wh.zw6UmLYc7OLybtX0oVzYT1sYa3h7JbJmWeRHSXHqVhRO4v_xYQmf_e2KkKPJkzlrhrv4rDqqQkNVc2swXo.dZfJlDkcSiknr7tsV27JM3VeciUAdCWY284BF7fxEADir_yPtcFy75lKOXw4qC78x5.O9ezAokQo0H7pxmH.2YpWY6mriBYYXeqxESNargDbrTSI.k1pWzytY32Fc3KtqcJy2z4f15TapyFARWBYP42Vc_c4xYRuBkTgwgz37XKopti8jVQBS4wmi_jlW1U4Qq4rnLSyqFT8RGcfAN5DjjRGuoCg2WqJvMa4kCdQpcZ6qf5fHNreAGQbNrfVuPgAvskJLiYxvUsX2Apd4iX7Ebp.yyA3Ejfb7GIP2a3IaGghflEg7kSZY9_D5RIrqFX1hto6J1ZaSwxi.bURzDf79YQukFggARBrmb0eqL531q8ZpsGaUNN_SN2nOX0Fg92i3OjFgouUfmo7JXaXY5GiB5Hc_5KCK.WVZWZpMFzmehalVtS3YhWDEeQ3LfSwRiWJQEhAVvAzgkRVpasDReKwi_V.vTuSb4AwhbYDWyEMSaKwvOBJjJr8yZqnDzF.CGPh7pzB.v_moDgHuF4pCeGjfJ3zO.MgmOf30.0UbOj5.0Ozcn76C2jJNX4dtFzAiB93EIxWusv_lAhp2n._KtIU4U7CrPGaphm5eHpsL9mwsgcmcd6jPe2drDCFTOt1vD_T_4SafrPYO0cnlH7P6UTdFMEje3DhRdj38J.oM_50lZZYlLT9DKzhgfaMG472cbu4Q_TgW0Yt7ZlQBtjwuttXoaxT3Iqgx_AC9cmccavusQHw3Yqk0x08ThnbR9YaYVKhtwAqDYHXJgl0TH._X6TEaCXaNxyaBHZaYL9s1CcWYG6R63Dq3LMAWov_xAgEPSXx86EqOkaWwdoJLkZUCoicyHEii4JcJbGXFmiiTYHdMHb7e8L.ukf.TB8pJLmoZAezyq.o.DlVpfKFsDOJmtV_HaODKmBAIDJmXsYEh8YJc5oRExm7GZ5Mm4bjxSU7yfGuWHraHg0iCLwCeEMfblGF4ZhW81Z5KjV_qse5VByBMuNLI12vCTXS7djvj.nSZ3lglCz2L3Qa8GipoPGOmD.txsAAO7bC2MJDNdJbNQfQyHZ1mQkdY3M0O_qyWjc1.fRRUfF_awOIdvFxmxFBDk6Kp.GCjH5iCkA_bUJD78QtGVHlS57oYpl30DGYe_ct31ofVpu_gos9UYCq7RnUyZ_9j0zDNJkJYzNm4jqIPM6H4vZS26h32pDDs4VfzkJWrRH1lBoSFKn5gQUW1Bqzc7aMSQ8jReWTW9J4WEGfd2NZAEyRgCZxPACO_Gw6U2wF7DTVBA_Km5LYlGXPvwOHZi_t5AuLlyApCG82ZmkbRanPbFlyxUfsyxQdpesYDuP1lWd5AdEDkBK3suiBFoBHWwvtbiSOr4J.pziXGw3A8.uh_ahmGQ0l_43tNOJVmZwk4W.WA0FpgKa2bOnRIPhBzhg8Y6043tyS17ZKiobzC1rF7HsJWjAUhN7R4C1u5oFrIIzDuT0CgCzt8FH51iIlazQidsarF.g9k21HgZ0xLjOXwCUYuHQnBO8qTsWZblaCiLB75pASYoEY74HgtpBY8xMhnYhwaGbRlc56vabE530pk_uk8M.K9XJZ1PfPvsOou8jpMT4.q.kgRkbwftSEFo145EKkQfmpNm_eZrTVuj2I2MfXOfqPZMXGFDTTuqHG0C1m014RzmFu4XmZ5xpjUzNH2dbtYcxFES15_xj8c9RadGWM5f811UC2Xk3tURHiiz4PhYhDRb4OFKHmozsi2JFNlMrcNyrvmgiB9pZJjni4UF9TOQUNgHHQ1B9OMTDR1YETRqzunjVCNrP2HMDcPhyOHh85Mj3d7L4lNx175ciPzV.eMcCF8nzdvPQ0caHjduRW5gAUZxSx7hJvLr9lGCZ51MrrLtWnSB4MEpzGIvX8PSBZBUQ82qenDiUsHVD0OFzOcgZNvgrmoEmmQt6q5IHxU4OZS5drG3j_D85t00w01nbFL8ckC2o29ZUCOHAIa0.1jkoG6GKnreoBVrvpatqkXmbe9iNzLugbEoGLHeyLI0C_oadSz7VRK2WCP8iM8YVvAryrgAkDr.VG5fOzPv.1TaBsvwJu3CP7vR5D17ZJra6qgUUhEm0yAW4loWOeK6HFMxHSrQZyEfaLjnYDvNVhlFZKqzOfO.YVKzQITVRs1KYtPcUbc9P9N7_5uesJv_QIhGCXUzHR2yJF2bI0C7EfOuBvKv39ZBwgXMt9BdGdFknjqAVfY92RUBn6xjViauGg84_2N08A\u0027,};var a \u003d document.createElement(\u0027script\u0027);a.src \u003d \u0027/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray\u003d9c2064153c05d76d\u0027;window._cf_chl_opt.cOgUHash \u003d location.hash \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.indexOf(\u0027#\u0027) !\u003d\u003d -1 ? \u0027#\u0027 : location.hash;window._cf_chl_opt.cOgUQuery \u003d location.search \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(\u0027?\u0027) !\u003d\u003d -1 ? \u0027?\u0027 : location.search;if (window.history \u0026\u0026 window.history.replaceState) {var ogU \u003d location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"\\/api\\/users\\/3?__cf_chl_rt_tk\u003deOub1aE6STDMaqJtT4GWfKJZ3J1LanMwQC9bE_LRre4-1769098955-1.0.1.1-K0A4uOhIiHwMx91Vii123KXHFZiVBu4ejK.9Jmaj01k\"+ window._cf_chl_opt.cOgUHash);a.onload \u003d function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(\u0027head\u0027)[0].appendChild(a);}());\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:168)\n\tat ✽.Then I should see the following user data(src/test/java/API-Test.feature:16)\n",
   "status": "failed"
 });
 formatter.before({
-  "duration": 672149,
+  "duration": 782059,
   "status": "passed"
 });
 formatter.scenario({
@@ -185,7 +185,7 @@ formatter.match({
   "location": "StepDefinition.iMakeASearchForUser(String)"
 });
 formatter.result({
-  "duration": 199629463,
+  "duration": 194400632,
   "status": "passed"
 });
 formatter.match({
@@ -198,7 +198,7 @@ formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(int)"
 });
 formatter.result({
-  "duration": 506033,
+  "duration": 441617,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -274,7 +274,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 273581,
+  "duration": 250954,
   "status": "passed"
 });
 formatter.scenario({
@@ -338,19 +338,19 @@ formatter.match({
   "location": "StepDefinition.iCreateUserWithFollowing(String,String)"
 });
 formatter.result({
-  "duration": 178134763,
+  "duration": 160078548,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(DataTable)"
 });
 formatter.result({
-  "duration": 1124266,
+  "duration": 1048526,
   "error_message": "java.lang.AssertionError: Expected success response but got 403\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:213)\n\tat ✽.Then response should contain the following data(src/test/java/API-Test.feature:27)\n",
   "status": "failed"
 });
 formatter.before({
-  "duration": 288538,
+  "duration": 267972,
   "status": "passed"
 });
 formatter.scenario({
@@ -414,19 +414,19 @@ formatter.match({
   "location": "StepDefinition.iCreateUserWithFollowing(String,String)"
 });
 formatter.result({
-  "duration": 142532220,
+  "duration": 137850401,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iReceiveErrorCodeInResponse(DataTable)"
 });
 formatter.result({
-  "duration": 520403,
+  "duration": 439614,
   "error_message": "java.lang.AssertionError: Expected success response but got 403\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:213)\n\tat ✽.Then response should contain the following data(src/test/java/API-Test.feature:27)\n",
   "status": "failed"
 });
 formatter.before({
-  "duration": 233584,
+  "duration": 269389,
   "status": "passed"
 });
 formatter.scenario({
@@ -477,7 +477,7 @@ formatter.match({
   "location": "StepDefinition.iLoginSuccessfullyWithFollowingData(DataTable)"
 });
 formatter.result({
-  "duration": 148742523,
+  "duration": 132489455,
   "status": "passed"
 });
 formatter.match({
@@ -490,12 +490,12 @@ formatter.match({
   "location": "StepDefinition.iShouldGetAResponseCodeOf(int)"
 });
 formatter.result({
-  "duration": 5233353,
+  "duration": 5376224,
   "error_message": "java.lang.AssertionError: Response code does not match expected [200] but found [403]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:294)\n\tat ✽.Then I should get a response code of 200(src/test/java/API-Test.feature:40)\n",
   "status": "failed"
 });
 formatter.before({
-  "duration": 263294,
+  "duration": 249486,
   "status": "passed"
 });
 formatter.scenario({
@@ -559,7 +559,7 @@ formatter.match({
   "location": "StepDefinition.iLoginUnsuccessfullyWithFollowingData(DataTable)"
 });
 formatter.result({
-  "duration": 146496483,
+  "duration": 132539328,
   "status": "passed"
 });
 formatter.match({
@@ -572,19 +572,19 @@ formatter.match({
   "location": "StepDefinition.iShouldGetAResponseCodeOf(int)"
 });
 formatter.result({
-  "duration": 67841,
+  "duration": 60414,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iShouldSeeTheFollowingResponseMessage(String\u003e)"
 });
 formatter.result({
-  "duration": 717258,
-  "error_message": "java.lang.AssertionError: Response does not contain expected message. Expected one of: [\"error\": \"Missing password\"], Actual: \u003c!DOCTYPE html\u003e\u003chtml lang\u003d\"en-US\"\u003e\u003chead\u003e\u003ctitle\u003eJust a moment...\u003c/title\u003e\u003cmeta http-equiv\u003d\"Content-Type\" content\u003d\"text/html; charset\u003dUTF-8\"\u003e\u003cmeta http-equiv\u003d\"X-UA-Compatible\" content\u003d\"IE\u003dEdge\"\u003e\u003cmeta name\u003d\"robots\" content\u003d\"noindex,nofollow\"\u003e\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width,initial-scale\u003d1\"\u003e\u003cstyle\u003e*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width \u003c\u003d 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width \u003c\u003d 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}\u003c/style\u003e\u003cmeta http-equiv\u003d\"refresh\" content\u003d\"360\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv class\u003d\"main-wrapper\" role\u003d\"main\"\u003e\u003cdiv class\u003d\"main-content\"\u003e\u003cnoscript\u003e\u003cdiv class\u003d\"h2\"\u003e\u003cspan id\u003d\"challenge-error-text\"\u003eEnable JavaScript and cookies to continue\u003c/span\u003e\u003c/div\u003e\u003c/noscript\u003e\u003c/div\u003e\u003c/div\u003e\u003cscript\u003e(function(){window._cf_chl_opt \u003d {cvId: \u00273\u0027,cZone: \u0027reqres.in\u0027,cType: \u0027managed\u0027,cRay: \u00279c205e5f28165542\u0027,cH: \u0027bZl9Jx114plHfRoHONDSsVTqiEgDKXSdF6WRp9Bq2Gk-1769098721-1.2.1.1-kEG9pPQO_6swzVCQL53EiaVOBfHpdOawhkq6LqNZOl.rvAn8OcpxHp0HT02KlUq2\u0027,cUPMDTk:\"\\/api\\/login?__cf_chl_tk\u003dqv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as\",cFPWv: \u0027b\u0027,cITimeS: \u00271769098721\u0027,cTplC:0,cTplV:5,cTplB: \u00270\u0027,fa:\"\\/api\\/login?__cf_chl_f_tk\u003dqv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as\",md: \u0027v4E8W7B6.H_gC7y6Csn555_LFQPNYVE4XKMWfGUVLJA-1769098721-1.2.1.1-eYPkvKM.e8A75gqj8vLx4.6MOIVWvtL5AE8eCQkBPevblHI5C72IC.AfV_bQWEoSsrtOSMv74K3DjY6sc3Qsztrin0cU4iZWPpR0k8HxB1sSWl0Wbg0TAUqkSmpVen1VmmBw6t5KjyXPNNKi0iyBcZcuUiTmo.JQMN5JGtagDK7POt6wFjdhcsoFFrM5DVGd0TqUcdjOlClYl10ks0ImcbbXF5yxYS_CJT5EMQ5tgJkOqRSHkSoqXMFc7evUQ6PTr7L.QZRhJJSVg8N4kHqmc0DZwEUTnAN9alYigbp8rOjRXqz5Vc1lhnS3v.EBO0.OIiM6OFDD4ddxUBFAX5Op7lbVRysZID.LGSu6V5aQSGg8uwycF70lpE9CHpe30BtJEBC58v7qSpKGn7nVX9HaaI_wFNUoQCoodZSHEH.dcY38IsYuFlw7OBO9J94cO5CJJka2KrPKn_ssUYEohJze0x.PvHfvSqGUheJK7OYcglQFbw7.0RyP4FOa2xmM10expkuPLcPAeZJEd8XUsouTyg9VFmbrDoyKCFH26VIyew0CDNxovS1H4ODFhbVilOlKZtUWdq.RLCRKKXqQwK8AcfEhZ2AfpxLM_uhBiimF5V0nP8qaPQMGalQrjUDRnmfAH_wjuCawK.yCA7Qa6Zj3Z7QVOs6k2P2Otjxp_egPRvMUVINdFTFO.Q6Ahkzyleld6xy0izgjxFI2LTsFoS.BLVDggXfzHAi.ebDtEHpRW3GR46heR39gYeeVBUjy6dcN5_bEFn9hiflSS1iTO_ezvkQ54Qwzf4eBZDFEbE3IJwQSv9w7qB.v7995lvAlWumZgBlsMjTkTgxaQ2S5suDQVctsX7BNdKCcQ_biTi69QKZ9ayM09wIygn7nm.TVXRnU46t_1Q1ZVx5LZ2PmOIk.DLlCuhNzqu5ztjBa3U0wDTGOc2csIrPK_ME8dj9MdE25\u0027,mdrd: \u0027m76NgqD6fDZY45satyGOdSPy0NaS.OB_eJ8bIsxpS1k-1769098721-1.2.1.1-tIzz5Fwrh.p4foU7MB.G1LLgbK0IWR7i93ljTFv4Bp14q2U3n9lOKmql.vsaPDeFe3ZbGtz63UHzB3Tc62yodUA4XrKo8Jm_M2vZDL9k1gHf5_iwf2SxHEWyxzjbEKHOh1EzHMJEYbRN_78TTyCTcsdv6tna.61qopa9nYszOX6kCRl7hToBgmr7bcl5FB2CbAqu__9n0SefxN3fWiIX_seQtgsfzqnS2KSPYp.k6Zd7JHVb2MLTnUQLoJaavZ5ZGtMk.agONzB4gXJEvP5bvQNEi2mDC3X3J7ucEXv04OLuLgsX90.Z9WViXa5y4rmuTuj3GZZ7jYq8jleGDthbmk7Fm7QN7swCXU0q5pXdDTt3aQAInZngZutc63XNa9S7.yE7l17Y7ijwCaHbxJxTqqV.odVmR9juigC1D6K.7c7s7PI8QEmL9ZzT9cRqYW.CkYJGcFl.xUfVqHjY_xEG12z.5WWLNhvHOZrVXxJ0CFCD_.oX9Piiuv1a6tiJz5nl5c2eLrW92MGubNsQAj79Jo9fmFdXKP8NNryZeSM5OTTNl0QD48vdOF.XSX1LHoFZUAwRFtdjQj1A5HWGfcnre6dwl_9Rhs4RS9occKWOulWsCU1_cJnlIgDIXvYLjpw7fVtQQ5j8bGz0etwu3oiXkpMX7uwlvNj.6ZHXhFZw3NoT9z4wiLoI0BrjwxDsYaq7p8k8_wcCHKHlYICQhZ0WZJSW2U.gabraIAe3qB2.OXJumU5fCHXtSiTOuDrtI2u2RRzrHe_uWrBbLfAwfsPKpcCYFBUJkiPfOOU1SoR4mVUHLMZaMKPauhmlZ1p6Dl7j5oz33fpCaHr1zx9.zLHqUK9Wc5WuN6XZXz4gAX2qB9PFmU5eeyafKNfQZBM2eih4qO4KDYcwPaHDjwrte1wGMPMN2NU4yuDjiadq9seFhsZvvijs3IdfVvKW91Q_n2KP97HoOOsEKa8tu.iwqFIm_MnBn8Jqib2pOUDje7mqqvt0Zk4_mD7x_xpGyX6iivxxmyQcyaO87SlPJ4s281oHQeGsdF0YxDNXhIylAGXBRUI6O51vTV5CFekTpJRy52W.TVWiDkMZ7H4cqx7YC7VUbM0hklWy8o9Z9wDCD4S18MbS5prWF94GJ_BXcOtJIukS4Qofojpkwlswiuw3hnFY3q1pWlqRgFVnAe7iztTX3.uvCYriF9XFuDNA3h_ejzCer7lmGpLCbCA_PyBFLjMkprF__8lgVrc5bR908RRoMeo1HMVdmXJlAVI_FM8gT_38BS4bmmHxqo16AscG1IyaK1bZ.DOYTyR21URBx38eF5zBiPywRG4b5jt0rLx05AvzkuYhQGfE9u_gyMSZBXD0C9_9vjicqDQEGGUj_NLq5ZySnI7kXm.HY2ew9EkjQ2aDDGsxSb3H_ifkPTs27I2V1KF3Iz0Y.FhN.TrTFmHnJt2xrMoztWzXvenFHJMhxVMeo1Wf9JihNsTR2MuDPy7GN_clqjjFh0_PHaAgRz_iwxe3C5Kz5sV0NO2nciUCJBigF.NK_KonimJavRpS437iMtDFFfyzXtl2plcgxSPDWX1BPzIRzeX3IP_WwuyWDt.5q8wMLQjS.jSahbXd8DzQWvPLoVufmdgjlpgfO8ea5UiHHynvKKK3LE3uZSLA3LWk65s7EFFSY_Y7ISAp9CQMM2WSJA1q_Id9iJLQ3sovYlj1hG76PEToLtYSYLOqe1mjNYGR5BF5kN9EREJs5GMnJD3EufD6O.JUEcP8eyt5PtF_z4eLmvbGCN70rS5TwNvWJBWNowBEybjGwjv356W4LpZcSSYXdrpH0330qaYhgCxFI.kT5Mwt8EWYRgF6WcN0jQJvUCkolnVg1dPYBnom8jG3ti_Y53KtazxKlpHSiGA2Jw8v_fgjy9wRgetiiN_wl2NcCJZoRJacxzslRPdEJiBywNjMb94xGha_M028LU1dISd4ydNvybpqc4WbtP8w_HZeLJ9nbGJhuEUSqlYHTETCJV9XNZ6om4LT5eqTv74.2ppbISlIQ3ggx.bEX2C6s6SjYBSm4aGB_0b0AticwfyjmikO8UXLzEuES7e9eCZdE6YeTMSUoSmMlP.pW5lsoNvMAUSGISoOWlFekApovUTNS5vVr0Cf3RChG5Lmixlv1vrynMVWhV4xjkV2okbb.fqE2pgmpgaPxYvogKsfR1MR5Ca.kC2E75aVuVjTk9Czd4APCSW3Jp9xgk1UUTzPqea9CmzJAHZVucmkw4LCdjatgNqZFX78kD0W.DzaIM1xk8eHMjasM7dmGF8uRLZzRW7__dUXU9KotOjeJbPBkNk4snCQKOgkX4nNEsgkMtL7irttSalRhU9JnpQ94zvV.RP_o_Ilh9wkBARTdUgfiHIRPWJ4hrL8cjeZaH7yW.tZGEzTyMsQZrUckAFf2cpk6FmeKTWQxWwxdBqii_9BdeOPRkvqydh4TpRi8DzG7Meng6NH5U.qsGen3fZKPVBJpJ0T2E6ZVjE17DiaIPVtwA\u0027,};var a \u003d document.createElement(\u0027script\u0027);a.src \u003d \u0027/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray\u003d9c205e5f28165542\u0027;window._cf_chl_opt.cOgUHash \u003d location.hash \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.indexOf(\u0027#\u0027) !\u003d\u003d -1 ? \u0027#\u0027 : location.hash;window._cf_chl_opt.cOgUQuery \u003d location.search \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(\u0027?\u0027) !\u003d\u003d -1 ? \u0027?\u0027 : location.search;if (window.history \u0026\u0026 window.history.replaceState) {var ogU \u003d location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"\\/api\\/login?__cf_chl_rt_tk\u003dqv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as\"+ window._cf_chl_opt.cOgUHash);a.onload \u003d function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(\u0027head\u0027)[0].appendChild(a);}());\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e expected [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertTrue(Assert.java:57)\n\tat mission.StepDefinition.iShouldSeeTheFollowingResponseMessage(StepDefinition.java:320)\n\tat ✽.And I should see the following response message:(src/test/java/API-Test.feature:48)\n",
+  "duration": 615680,
+  "error_message": "java.lang.AssertionError: Response does not contain expected message. Expected one of: [\"error\": \"Missing password\"], Actual: \u003c!DOCTYPE html\u003e\u003chtml lang\u003d\"en-US\"\u003e\u003chead\u003e\u003ctitle\u003eJust a moment...\u003c/title\u003e\u003cmeta http-equiv\u003d\"Content-Type\" content\u003d\"text/html; charset\u003dUTF-8\"\u003e\u003cmeta http-equiv\u003d\"X-UA-Compatible\" content\u003d\"IE\u003dEdge\"\u003e\u003cmeta name\u003d\"robots\" content\u003d\"noindex,nofollow\"\u003e\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width,initial-scale\u003d1\"\u003e\u003cstyle\u003e*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width \u003c\u003d 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width \u003c\u003d 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}\u003c/style\u003e\u003cmeta http-equiv\u003d\"refresh\" content\u003d\"360\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv class\u003d\"main-wrapper\" role\u003d\"main\"\u003e\u003cdiv class\u003d\"main-content\"\u003e\u003cnoscript\u003e\u003cdiv class\u003d\"h2\"\u003e\u003cspan id\u003d\"challenge-error-text\"\u003eEnable JavaScript and cookies to continue\u003c/span\u003e\u003c/div\u003e\u003c/noscript\u003e\u003c/div\u003e\u003c/div\u003e\u003cscript\u003e(function(){window._cf_chl_opt \u003d {cvId: \u00273\u0027,cZone: \u0027reqres.in\u0027,cType: \u0027managed\u0027,cRay: \u00279c20641a7f67509a\u0027,cH: \u0027kHWhasUo86vnJiqn.184B2JT1IMlcH2Ey3zVVoD8gAA-1769098955-1.2.1.1-f_fEuiym61KwPQLi7Eb7TAMRlzqR64GDCaqBy1WAaLXCfo9nZEPb_vCcG3wpokFO\u0027,cUPMDTk:\"\\/api\\/login?__cf_chl_tk\u003dFbGjA0y3TPuKfm0Oxhar134.nEXG9ZEkkWCEsNTxZYo-1769098955-1.0.1.1-LiTD5W.b8hzWDxsLuo_Mxl9C2l6.Et6E1Pu_YYFr4Oo\",cFPWv: \u0027b\u0027,cITimeS: \u00271769098955\u0027,cTplC:0,cTplV:5,cTplB: \u00270\u0027,fa:\"\\/api\\/login?__cf_chl_f_tk\u003dFbGjA0y3TPuKfm0Oxhar134.nEXG9ZEkkWCEsNTxZYo-1769098955-1.0.1.1-LiTD5W.b8hzWDxsLuo_Mxl9C2l6.Et6E1Pu_YYFr4Oo\",md: \u0027x4r4m8xIGW5SS3.GhCoFUrnVajl5xhV1NJHCPTCPX.Y-1769098955-1.2.1.1-pG5GVSNMORwtkweZHgzJH6VHa9OxLIRuwPzjtRgpIIoiAeIiz3Yc_tKwi3WaFdAfmh9gXtmZk6pLoKvrDe8V2gCflVPOh4lqOcQoZoglMqj9yiByuPxAkuFNuhjPEE3MDscaLkLNeYPLJofqj2O92OI_wkZGQTvUOOVilPBLV4PHI64s_fxbqLQ2vBgv9wk61BD.MLpTUeY3foBKSIZN5o1Mw3CxzLKjzUjZQOq._U0IF2v4v9guzg1KJ_gYUvRPDieiX62mngWQYt5IJKYzoN7850ZgcsHarzrSQfGLbZ1hl.fgDtB9DuVTcVr_cxuhDYhdF3E8F4f0EueAVyDwOSnaBjJ37x61Lf_01sH9DYVwAS1DAmKFwVzBPHWZHCbCn_1w9Aw3BTh19p3GZsRfP6x55GHBRaiwe1vcBroBtonNdG2i.XVYhAu.jrm3W4gtNH3EdcwMQDDy8kl8DpfaqfTCrS5813fbqD_bB6cDWEWjC4QA30vfiwLDf7mrk_wqzPJ5E9CW48Al74eHNqYKW9a.8U32bz6tM1z7qDPZMLEshfcDwFmysoARgp99H1eGq.38CIwXkme1PgmzAn5ARzbPVul0oE.XYjEsjX2nmGW8LQ8eliZINx0CnKPFSHA8.5r4uEwIDNW7sN.wA1Xw3dx2HDSPlk4jWpYjtiBGk0oDOfdjIJDsgYQnwmSfTW4IVL7OUoIMICLiRsq2EfG.NO6YhUen3GWgaItUM9Ov0GS3xA9B6XWy4sKrKzeQuvfMdL5Rb2G_nJ5JSbaY8LiehGjSZRqaCuy65GuJS6eGlzcCYRQL3goawVxYw5_uzeW7lOX1OvPI2c3IMM8vHk0ATybXdDywlonWLmusymXHShacIRZCzrSSjO3UEckd21aBjYY4nTaGSBHybJGZv2AwO5zE4AZ6WLp.g_pAhu5ArmH_TKd06GNMhWNDoLL8C0NJ\u0027,mdrd: \u0027N_eY3vI2QZ5zW_fgWJggUGxKfzytN.GDPZAEyzSz9Rs-1769098955-1.2.1.1-Jv3M1NIVqQ8ERYquUP5fFNmhuLqIc2uMeRdrMkQK4S8mY1OAFcnknzTp6wna1DQeQMvKs2oOyoNpkxKX33j1Cprl2zUV7xAUANKuA8GFB4e430M38U3vk2ogJZWS0EAFr5fleBjggT7GRp.cX3vIWBS5.wP4Slk_FfosLniEZGr5GRQw8KjJgNybCYK4Jhu7Rhn0G9WTLprauhkPHxlglBvftXlebxQHYMUiGNFxUSkoKAw7oexz5pk64K5jj4Z19lkRArwk37.ou0aicdehwA87g1mcNOSvKQ5a.Nq7H1QPCLINlqG__T0IfF6JSqEKXGwqciTaw33ntzq3rwM68yZXZZRV1Qe_ngaHxmpPWMYrohN56ghWztE3gp0P8e_sbaDuauwAyG4OUOBN3whLkup4GKgqMP9dWigvbFmI3CYRu2Pk80B1LYRa16_Ga0VELr84bKHPZWg8stBEM97gSb1NMEGqXnacSlJ6M6wHhOp7ViaXUp6xolJyABpzKvLmOe5cDtPMQnjTBJhMYY0ea4N7HdD582xn0rN75xfeOvhYlzsp5LyGIJnl0QwWX.ctkx05_Msavb9M30deG2qgFmqqJS2XYJhlWo5ojq47lkGkWE6TimvT5bPpEIwtzmM0WJFgjnQQDeblL8cTeS6CpERf1vQl252XH8bPaoIaoQNFJbIBnLCrPnDD9gVUbjKZNRQug1PHABxKIGnc3_663PiFS6rH6uDNeoHMHhV6P43YN1Zy7wcHDUXj2R4NI8c9OeVHp5GL_.VED.e1DY3fE8onXqoTbMbjeSdOv6kUJ4rzZWXZGDv3ZgRjQWdqqbIHK1w2pntS_nqafSGdMxEw1SooXpxA1CVkgNsL816wP0iSSnFk3_zurLLe.WIe4Zz4x.alGFpPvOxX5DyjicMiMQxAeuMoeItBH7TUtTDGllbxZSQgMmCQUWaBf0kzPRUEjO8YBpSI29gGgDN.61j8ZZTiC8DHXRJ4nH0FfTsjO8SoGivd3xwGf5S.GzCCaJBksegLc0pqeDg9V9asU_QBDUEaVvDP6qRQUjsuI47dV7cBKKCoUizGuPaZASM0HnQyIBQg1ZNWW.CzqnJVUpazr4eqJMCTkKZrjbbFiEavJnXLN9hJU51A6kwp5KwaOJpz1kjNMkURyCIuTvYH0VdCkJM.l8WpSp0XnfssmCUztjbj1LCj780WKM7x8vPKmMcI0qRcyvb.cAvzQqe4jRWsB5OJusLqK5PuTsur2Fb5vtZkEaf8i0.ffGOV8H8pcln7LNbqez7hhnsAfaOLz.srJEZkGZjC1T6oWYhPUwrILNvzAXVyZfAwMUDSED6FlnYKbntmJTZaIx2qxfsY9_HpNfSGnbFUGqEkZkBmn5YwcUumOTJCp10ZxM3f3n_HZ6cyJ_7ucNbL4qD1Bsy6vjhc0WYGpGDgbn_WMY3Rnf04Ub4X399glaEwQdVl0hkPIJh4tpXRcsNEFZjMMm5H1wDDQ5r6FjpXW4hRBcxdmejTnuzmgDu3wIdfB149o7Ps4XZ6qTNl5laEQarGKsCjScQ5v4GJVAAHAwcGFl2fmwyV_gDLbtupg6v2soDNwkWG.zN6psHjVleqArrt.TwJK_qBORPJa6XfSQGu01h.wJd2pFtysVqsqIuHrTn1WiluD9k8z3o3z.etcnc3sEw7QrYXZmPz_M.l9yZdZFetQGKAD32brf8DY8eRDz5BuIR6ANrZZsN9KzzFheADysiKSsyZdowgCBqsHJifU1R1p_ROTmJxzNYgfZDw8Mp.Uj20iGb_pFRDNgN5hox0XYO4g9_e7b4wFLRjBkSdx_lu1MbFCUDr.qweQQsofvzci5VcJH7lQgkU_Qp5CHk701G9u97qOCfzH.DubJshaX7NRHG7cWDWD7iBQqwNmMnVvyKdUK0w_p2OsIBT9Id9c5grA.ei2j89bzXDTKDhggB7axHv24lm4znP_6qjdafAfYltv46Qjb26RJBkxmTTULivg1MJ8i6PCAOrYeryoiEBrTPYADBfiHSkjefaB_4otnAEBFEwqKX4FagfUTWzBRij48pCA14mdhsCssIJfAupL5bye4jSE8tN1WpX.jJd7eGqvaAvijKlroBO_BjfCOZ8C1VFBxhYQLrTPZLjtbR9AlTVvFZx6h8mEUBKDigsHSTgHDA56lQ434KH4HbFAd9pXbhWqs_HI4W3kEMu7tX0JL92efKvZc8nmvq8xGRGJe0dTRmCMRBUYtGRBQvJzUAICKjjjOlf9UgR3KmFzeNIyI9az56lXjhQkEUD5RH2gLuOLaV3PxgZL_4fyUw.BvLZiCW_z8MbopvXGXF.5pxU3LGoX9IOegAu5j2Zi.Yy9e_tZ_CKsZ2LFbGREoNJ8Afvux0XhRwUQG_gts_gCh0oYSdVgIYhFwRcZoIobudj1uRYBmW6r3bTp6SYB7b_T8046rM_mMmKNYIxNhfId2pEmEE9fpSOTShwrZPOLV4uXT9R8xNJSZYl8o4HIYYcVqv8K83z6HFoQu_e5MfI.dVRqePtAKw\u0027,};var a \u003d document.createElement(\u0027script\u0027);a.src \u003d \u0027/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray\u003d9c20641a7f67509a\u0027;window._cf_chl_opt.cOgUHash \u003d location.hash \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.indexOf(\u0027#\u0027) !\u003d\u003d -1 ? \u0027#\u0027 : location.hash;window._cf_chl_opt.cOgUQuery \u003d location.search \u003d\u003d\u003d \u0027\u0027 \u0026\u0026 location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(\u0027?\u0027) !\u003d\u003d -1 ? \u0027?\u0027 : location.search;if (window.history \u0026\u0026 window.history.replaceState) {var ogU \u003d location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"\\/api\\/login?__cf_chl_rt_tk\u003dFbGjA0y3TPuKfm0Oxhar134.nEXG9ZEkkWCEsNTxZYo-1769098955-1.0.1.1-LiTD5W.b8hzWDxsLuo_Mxl9C2l6.Et6E1Pu_YYFr4Oo\"+ window._cf_chl_opt.cOgUHash);a.onload \u003d function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(\u0027head\u0027)[0].appendChild(a);}());\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e expected [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertTrue(Assert.java:57)\n\tat mission.StepDefinition.iShouldSeeTheFollowingResponseMessage(StepDefinition.java:320)\n\tat ✽.And I should see the following response message:(src/test/java/API-Test.feature:48)\n",
   "status": "failed"
 });
 formatter.before({
-  "duration": 238017,
+  "duration": 218789,
   "status": "passed"
 });
 formatter.scenario({
@@ -609,14 +609,14 @@ formatter.match({
   "location": "StepDefinition.iWaitForUserListToLoad()"
 });
 formatter.result({
-  "duration": 153543649,
+  "duration": 157985443,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iShouldSeeThatEveryUserHasAUniqueID()"
 });
 formatter.result({
-  "duration": 54981,
+  "duration": 34495,
   "status": "passed"
 });
 formatter.uri("src/test/java/SampleTest.feature");
@@ -634,7 +634,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2196549475,
+  "duration": 2545321573,
   "status": "passed"
 });
 formatter.scenario({
@@ -654,11 +654,11 @@ formatter.match({
   "location": "StepDefinition.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 717379932,
+  "duration": 598049837,
   "status": "passed"
 });
 formatter.after({
-  "duration": 546577528,
+  "duration": 506244720,
   "status": "passed"
 });
 formatter.uri("src/test/java/UI-Test.feature");
@@ -676,7 +676,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 1741998288,
+  "duration": 1624226454,
   "status": "passed"
 });
 formatter.scenario({
@@ -816,21 +816,21 @@ formatter.match({
   "location": "StepDefinition.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 555100872,
+  "duration": 1624581712,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iLoginWithFollowingDetails(DataTable)"
 });
 formatter.result({
-  "duration": 456536558,
+  "duration": 466500748,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iAddFollowingItemsToBasket(String\u003e)"
 });
 formatter.result({
-  "duration": 283116779,
+  "duration": 279213791,
   "status": "passed"
 });
 formatter.match({
@@ -843,14 +843,14 @@ formatter.match({
   "location": "StepDefinition.iShouldSeeItemsInCart(int)"
 });
 formatter.result({
-  "duration": 1027982559,
+  "duration": 1020911351,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnShoppingCart()"
 });
 formatter.result({
-  "duration": 68091313,
+  "duration": 66977673,
   "status": "passed"
 });
 formatter.match({
@@ -863,14 +863,14 @@ formatter.match({
   "location": "StepDefinition.iVerifyQtyCountForEachItem(int)"
 });
 formatter.result({
-  "duration": 51901710,
+  "duration": 55988776,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iRemoveFollowingItem(String\u003e)"
 });
 formatter.result({
-  "duration": 577831649,
+  "duration": 578659566,
   "status": "passed"
 });
 formatter.match({
@@ -883,14 +883,14 @@ formatter.match({
   "location": "StepDefinition.iShouldSeeItemsInCart(int)"
 });
 formatter.result({
-  "duration": 1022483278,
+  "duration": 1017153410,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnCheckoutButton()"
 });
 formatter.result({
-  "duration": 56480816,
+  "duration": 50094592,
   "status": "passed"
 });
 formatter.match({
@@ -903,7 +903,7 @@ formatter.match({
   "location": "StepDefinition.iTypeForFirstName(String)"
 });
 formatter.result({
-  "duration": 106577057,
+  "duration": 100784073,
   "status": "passed"
 });
 formatter.match({
@@ -916,7 +916,7 @@ formatter.match({
   "location": "StepDefinition.iTypeForLastName(String)"
 });
 formatter.result({
-  "duration": 96345367,
+  "duration": 85641838,
   "status": "passed"
 });
 formatter.match({
@@ -929,21 +929,21 @@ formatter.match({
   "location": "StepDefinition.iTypeForPostalCode(String)"
 });
 formatter.result({
-  "duration": 91100012,
+  "duration": 86724432,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.iClickOnContinueButton()"
 });
 formatter.result({
-  "duration": 70638443,
+  "duration": 63272714,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.itemTotalWillBeEqualToTotalOfItems()"
 });
 formatter.result({
-  "duration": 75514050,
+  "duration": 81209767,
   "status": "passed"
 });
 formatter.match({
@@ -956,11 +956,11 @@ formatter.match({
   "location": "StepDefinition.aTaxRateIsApplied(double)"
 });
 formatter.result({
-  "duration": 33152422,
+  "duration": 33215532,
   "status": "passed"
 });
 formatter.after({
-  "duration": 580475383,
+  "duration": 492609328,
   "status": "passed"
 });
 });
