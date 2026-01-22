@@ -9,9 +9,9 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,120</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,058</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">mission.RunnerTest</td><td><a href="#m0">feature</a></td><td rowspan="1">1769096486004</td><td rowspan="1">3460</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">mission.RunnerTest</td><td><a href="#m1">feature</a></td><td rowspan="2">1769096489470</td><td rowspan="2">3436</td></tr><tr class="passedeven"><td><a href="#m2">feature</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">mission.RunnerTest</td><td><a href="#m0">feature</a></td><td rowspan="1">1769098718115</td><td rowspan="1">3148</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">mission.RunnerTest</td><td><a href="#m1">feature</a></td><td rowspan="2">1769098721268</td><td rowspan="2">3504</td></tr><tr class="passedeven"><td><a href="#m2">feature</a></td></tr></tbody>
 </table>
 <h2>Surefire test</h2><h3 id="m0">mission.RunnerTest#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>API test</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
@@ -23,8 +23,8 @@ Caused by: io.restassured.path.json.exception.JsonPathException: Failed to parse
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
-	at ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
+	at ✽.When I get the list of all users within every page(src/test/java/API-Test.feature:10)
 Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
 	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
 	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
@@ -43,7 +43,7 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
 	at cucumber.runtime.Utils$1.call(Utils.java:40)
 	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
 	at cucumber.runtime.Utils.invoke(Utils.java:34)

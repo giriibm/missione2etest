@@ -53,5 +53,10 @@ public class Hook extends BasePage {
             }
         }
     }
-}
 
+    @Before("@API")
+    public void initializeAPITest() {
+        io.restassured.RestAssured.baseURI = "https://reqres.in/api";
+        io.restassured.RestAssured.useRelaxedHTTPSValidation();
+    }
+}

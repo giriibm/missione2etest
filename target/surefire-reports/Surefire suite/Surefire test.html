@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 22 22:41:25 ICT 2026</td>
+<td>Started on:</td><td>Thu Jan 22 23:18:37 ICT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14120 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14058 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -87,8 +87,8 @@ Caused by: io.restassured.path.json.exception.JsonPathException: Failed to parse
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
-	at ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
+	at ✽.When I get the list of all users within every page(src/test/java/API-Test.feature:10)
 Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
 	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
 	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
@@ -107,7 +107,7 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
 	at cucumber.runtime.Utils$1.call(Utils.java:40)
 	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
 	at cucumber.runtime.Utils.invoke(Utils.java:34)
@@ -121,8 +121,8 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
 	at mission.RunnerTest.feature(RunnerTest.java:33)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-... Removed 68 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace758201484", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace758201484'><pre>cucumber.runtime.CucumberException: io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+... Removed 68 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace269973396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace269973396'><pre>cucumber.runtime.CucumberException: io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at mission.RunnerTest.feature(RunnerTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -164,8 +164,8 @@ Caused by: io.restassured.path.json.exception.JsonPathException: Failed to parse
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
-	at ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
+	at ✽.When I get the list of all users within every page(src/test/java/API-Test.feature:10)
 Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
 	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
 	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
@@ -184,7 +184,7 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

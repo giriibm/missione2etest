@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testng-results failed="8" passed="2" skipped="0" total="10">
-    <suite duration-ms="13519" name="cucumber.runtime.formatter.TestNGFormatter">
-        <test duration-ms="13519" name="cucumber.runtime.formatter.TestNGFormatter">
+<testng-results failed="6" passed="4" skipped="0" total="10">
+    <suite duration-ms="13358" name="cucumber.runtime.formatter.TestNGFormatter">
+        <test duration-ms="13358" name="cucumber.runtime.formatter.TestNGFormatter">
             <class name="API test">
-                <test-method duration-ms="1842" finished-at="2026-01-22T22:41:27Z" name="Should see LIST USERS of all existing users" started-at="2026-01-22T22:41:26Z" status="FAIL">
+                <test-method duration-ms="1861" finished-at="2026-01-22T23:18:40Z" name="Should see LIST USERS of all existing users" started-at="2026-01-22T23:18:38Z" status="FAIL">
                     <exception class="io.restassured.path.json.exception.JsonPathException">
-                        <message><![CDATA[Given I get the default list of users for on 1st page.......................failed
-When I get the list of all users within every page..........................skipped
+                        <message><![CDATA[Given I get the default list of users for on 1st page.......................passed
+When I get the list of all users within every page..........................failed
 Then I should see total users count equals the number of user ids...........skipped
 ]]></message>
                         <full-stacktrace><![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
@@ -15,8 +15,8 @@ Then I should see total users count equals the number of user ids...........skip
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
-	at ✽.Given I get the default list of users for on 1st page(src/test/java/API-Test.feature:6)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
+	at ✽.When I get the list of all users within every page(src/test/java/API-Test.feature:10)
 Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
 	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
 	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
@@ -35,7 +35,7 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
 	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
 	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
-	at mission.StepDefinition.iGetTheDefaultListofusers(StepDefinition.java:122)
+	at mission.StepDefinition.iGetTheListOfAllUsers(StepDefinition.java:139)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -88,136 +88,44 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="244" finished-at="2026-01-22T22:41:28Z" name="Should see SINGLE USER data" started-at="2026-01-22T22:41:27Z" status="FAIL">
-                    <exception class="io.restassured.path.json.exception.JsonPathException">
+                <test-method duration-ms="166" finished-at="2026-01-22T23:18:40Z" name="Should see SINGLE USER data" started-at="2026-01-22T23:18:40Z" status="FAIL">
+                    <exception class="java.lang.AssertionError">
                         <message><![CDATA[Given I make a search for user 3............................................passed
 Then I should see the following user data...................................failed
 ]]></message>
-                        <full-stacktrace><![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)
-	at ✽.Then I should see the following user data(src/test/java/API-Test.feature:13)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:151)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at mission.RunnerTest.feature(RunnerTest.java:33)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></full-stacktrace>
-                    </exception>
-                </test-method>
-                <test-method duration-ms="229" finished-at="2026-01-22T22:41:28Z" name="Should see SINGLE USER NOT FOUND error code" started-at="2026-01-22T22:41:28Z" status="FAIL">
-                    <exception class="java.lang.AssertionError">
-                        <message><![CDATA[Given I make a search for user 55...........................................passed
-Then I receive error code 404 in response...................................failed
-]]></message>
-                        <full-stacktrace><![CDATA[java.lang.AssertionError: Response code does not match expected [404] but found [403]
+                        <full-stacktrace><![CDATA[java.lang.AssertionError: Expected 200 but got 403. Response: <!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c205e59dc04a24f',cH: '5PB2phw0SgTVcv3A2Gh57cMoqF9arFkxCdT8xrsFrLc-1769098720-1.2.1.1-VdzZVsp49exV1_mmvicIgzFN98XXMxThW_.6IWMhnQEFaU3wlb4QcxoVBzM_wSim',cUPMDTk:"\/api\/users\/3?__cf_chl_tk=WGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k",cFPWv: 'b',cITimeS: '1769098720',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users\/3?__cf_chl_f_tk=WGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k",md: 'eiQlVftGt8KcY7ekxp21M2i5gJ6txasq1foOC6HlCV8-1769098720-1.2.1.1-QKaIODcEZ8wuZPPk320mWKgwpK2qtFkmGGo5b9Lxc1FeRam47z8tC1u.RSq0QXoQbGGYEo.Tz5yBDVRSpKXKwROQPyPaeg9NTU8nBSRslQ3Hj.vxwXqJxHkMCVUjYIF1k3KeKI4P7l_psly.oUl5kPUWH_us7VNLcSjZRHYiXZWdZxr3rPTjHaaWudrMvMu2JYgBJ.yAyXmzZLmOJoUlgcXZCp9tqn1_TI5.xQOK33GWT2ygil6nOoLp1Es1W66XpMrgljpfWz3VjMdWlITRMuPVGrMEcGWuS3TFXJjN5JbwhUasx0LsdCfMT0Lvta2aeO1r8RcsrYB3TkDrKUEbmegLu.U4wZ1EOWeAZ8gTyon7JuSXgrBAyjx0IwyrNz6jG5hO8amLkXr7WEhSZn.d0WBxkB61PBs_L41UcpNqc_jyCZ.yntzLjiRH0xUpOc3cTVFC9aPx2_3ZO_qCsd62U1KUwWAJmTU.MrnHQdmOysV11Yvx1laDkkLzWuRa9kxPcC_m25bISUjrGrYZ7UblOa63UvcTUOHamfHSX.nP12BvOKza3jLgnbO_fcJ_J0m7NbWoWDRUGMQlDrJva94_9XoJmbaV.xGnKR9lNA771Gc3yggQh5O0PkGcjqcrpi5cNBr3_DWbOLctjo5CXxevKP1en0LuPAQ3_WAOeGX1WJP4GTt69M0j_sgKHr1_QWA5e1kMNm0DX_QSVv4Jk.BmfQA5gCxGtwTFLyPiqVxbKd2uYZ_mOJSZvuiNKY.rZNsXrlB0a5wzxHKkiwO9mPYMqTSaLUxRpRlUafHb0afv.wXP3L.ItxGyBGDVEYyCbduYQ8mwKX.u5uSDXbZtXqRcaM5CUwWk_yOs02g__NFuFOspnBFvJbNU21ZytbLB2g2fap6YxA7OdpxKg.tpNAmzUQrx.oBBRRPhKnGi4Gt9ycFvzxH6J7iF0cfY8LXdpOuo',mdrd: 'vrAHclhKerM52Tvt7M3A4viK75sH2Dt8bmPS8jUf8z0-1769098720-1.2.1.1-oGoYZzV92Pki6Ey0HM_nlgzDObjDiHGWXkJlmXd7V1rmuOOnlO50EamonUQEe4UPyJ_txbntFC50AQusZkU1lr4tM16BpfAzMIGdRuSc_y.IAUN5xGHZ5usaYw7FseKCBASi5oUeLuSuRdpLTctEBmanLvnlwJ6r3COwWcfh5KXgD2rV8jI1BasKISTQdGhVue5OrGdzWciDcbqeGdp3Tqe8dsduhATWehKWzrrRn4Z5pkquf3dEPORrzEMH5ZFGr7uPztBcu9hnnrXI6dOQjB7i4ShrbLpt2HVjzOr6dlkYzEWK0Yrf_aIHlrD5MdiY5HYERA3Ivh3hV5SQ6re7FbFcL8fIt_hdu.8fIE1YLNI.asuVZ3J8w.nj1XZNMF33LFZRmnT7nllDrUaDdHuoLpQtcffCw9QlNuCXgeaOyQv8QdfhUfzeXrg1UOWek.oSijPy0PUP_TyeCv_TwVBzgGKFsbp.XlqaEqNQ71fPrc7GhSc2d_dOr0Tg5TT617eBevVZ0bOalCvQ1WBH3ttNrq8XS7V4e0mOaNJ19jnAtFSz1dJmdodB_1ynr9tfI1WEyKTo0pLZtNszwHir4Bpm08IbgNT6dMIQiEQcjxnDIeGbjfQJXpXHdGlIJ2h5PEYU62blHBPzdtvpxzWs.b6J.TkrZ0vopXd6nIY6ClOGm3UN8kEC1MTKCFRhmDkU7EeyoQq0mhOd2xB9htUD001z3CAS7I.aQ_OgcDr01mZBblgRaEtwh8yl9tZB2MC0wa1dYMhl1MSxbb4jg63Ebq39BuCzmrfzZ2pmWqMlO0c6nEiwxPb0X.6g_DiIlvKDrZYFUrMVHU3u3DZrehWkR.nzaKntXXoXVKbNTIF8mOyzgOEbyUZdG3l9ikRWL6UYAuLDuLALCHqtd_Pmz0RucpSWjJPZjiFiqdCgflutd8kqIoP8eGyaIlliUToYlZ8coLyQ8x9tg0i4WZgS4chIyWkHGQ4mD9tMGccOTGTmlQwKETafQyg4KgV9.r2VJKTfxJ19uYKeCi2dUyAiO5qOa0RuoVOTlQGNy9ZexhTTR9zgw4QbHnMKfDwZf0qX7laqtHhEC48djCoaBFisohJJEX8N86jhIr9uhNRY6BoSTqszEPCffF.NzPtr0MGLi.QOw0..L33T8GVAQkKxFIsxzwXRkY8tfjKTuwtzBX.VA5SEZXLnenKQcsVEO2DsqjM84NxELw8iBZh2wsM.ZKdTAoOp9fJnx62T5al4rBT5FzXu.ipxTR.UBxtTQZlyf0jlnz38V0mphJiloMIC.LC2BkmtvA_V3OMJ5YLHmhCDZSuhwPIe4W362rsOeaHQgWniXrxRMW9VIo.Z5_q30IYgqMDCqTAwhiTkU0BL_Eu9BpomY7yfbS5zxe3iaOSan4Wet3gCjZa1_dC3B22w9Y.juS9iFcdl9F1Q64js16WOM5Yn6Oor2tG0GqZpwaUzlwMcVpa8WYNP85yMwN9LUhmbDWCcGNbVQV3GxWfK3aAy46M2D2sD.Xn705S.2pYC.hzPGRjM5BNaom5UJNvbyHLkr6z2Up_N6vBK_N1lERW.RYHo.A47p.nVaCsIXCF9P4EE24xNbyiNKZAh6ukRGms_hUdoMSnRF766Dt9EUo62iZjlzXMgAREKuntHETJNpCIpC00rOM8.JO_hhzXLI4cdpJS9xCzVbOz5qTmceoVxnkZTnmI97eieQkwtvABBPOiQQNbJ8uVd1ldDgVhv.4gtdp6MfR7BOe7oc.a5qHBdKQJeeDm2tVQkfcLd4xzDf7tsAK15CdxrVJ46hoIfG.f7es0i6Dvs2jrXTjDbVxfrbPagUUsMR1XGAoP5oNXpkHt9DVxZPEwornJURCeCW_T6zNRASAv2iansUjZUmVgVUKIlI0fq0EnLP12ucTlOwwqjVchHJngD.b8ki841WriOvtwG4qJjrP_Ik5J8hQxNMDxZFaxGU.MUM1qA7dV277nBBPtwopFKsaEPTH17nl04n3kpZCyS9u2wRH22ZeiAbEeEmbCAvtutg94.NvSoLjj8sD3u2xsDlfD3_6nNUaIyA8GCJyUWJfSeGa0GOf_QDIS5HKFJdYes9EqyVt_u3iaKQAzxcl4DEL67BMMqsCAnQVInRQVZknjdS3kyYcqROhkw5Ee4vcqbqVP64U9E42ZT7g5FkqM6a9QtMxuZDc75QuXNkcReYwz1jKena0SPbkV5mXpY7gbwThzS.FulEbeJ_doPK0AHx_wIufzVcGqKNiFiYpCndu0v8IcAleRZVl85tjumihLBx57C4ageW5fMq7cUKjlliY6TlldDIq6MRPbWA_4ODW7o3zTyPgGfvUV4mACOfsUMQnRQ9elQQZSm5TMcmQ683Mfe.yD62CPWwS3O_0cTv464hF0kecFka2bJodHm9_RHnJp7QTpLShugad7lsF32h9bZkAgHcE7gSn9iNw',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c205e59dc04a24f';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users\/3?__cf_chl_rt_tk=WGZCNw8yqVYd2kbsKcw.Ul14tkhFBsTo7ODbXhGN1RE-1769098720-1.0.1.1-cnMOWMbwQYS.9CnQouP56ux7VLHDCxekPnqMPS.394k"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
 	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:162)
-	at ✽.Then I receive error code 404 in response(src/test/java/API-Test.feature:20)
+	at mission.StepDefinition.IShouldSeeFollowingUserData(StepDefinition.java:168)
+	at ✽.Then I should see the following user data(src/test/java/API-Test.feature:16)
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="218" finished-at="2026-01-22T22:41:28Z" name="CREATE a user" started-at="2026-01-22T22:41:28Z" status="FAIL">
-                    <exception class="java.lang.IndexOutOfBoundsException">
+                <test-method duration-ms="200" finished-at="2026-01-22T23:18:40Z" name="Should see SINGLE USER NOT FOUND error code" started-at="2026-01-22T23:18:40Z" status="PASS"/>
+                <test-method duration-ms="179" finished-at="2026-01-22T23:18:40Z" name="CREATE a user" started-at="2026-01-22T23:18:40Z" status="FAIL">
+                    <exception class="java.lang.AssertionError">
                         <message><![CDATA[Given I create a user with following Peter Manager..........................passed
 Then response should contain the following data.............................failed
 ]]></message>
-                        <full-stacktrace><![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:373)
-	at java.base/java.util.ArrayList.get(ArrayList.java:426)
-	at java.base/java.util.Collections$UnmodifiableList.get(Collections.java:1321)
-	at mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:179)
-	at ✽.Then response should contain the following data(src/test/java/API-Test.feature:25)
+                        <full-stacktrace><![CDATA[java.lang.AssertionError: Expected success response but got 403
+	at org.testng.Assert.fail(Assert.java:111)
+	at mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:213)
+	at ✽.Then response should contain the following data(src/test/java/API-Test.feature:27)
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="188" finished-at="2026-01-22T22:41:28Z" name="CREATE a user_2" started-at="2026-01-22T22:41:28Z" status="FAIL">
-                    <exception class="java.lang.IndexOutOfBoundsException">
+                <test-method duration-ms="143" finished-at="2026-01-22T23:18:40Z" name="CREATE a user_2" started-at="2026-01-22T23:18:40Z" status="FAIL">
+                    <exception class="java.lang.AssertionError">
                         <message><![CDATA[Given I create a user with following Liza Sales.............................passed
 Then response should contain the following data.............................failed
 ]]></message>
-                        <full-stacktrace><![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:373)
-	at java.base/java.util.ArrayList.get(ArrayList.java:426)
-	at java.base/java.util.Collections$UnmodifiableList.get(Collections.java:1321)
-	at mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:179)
-	at ✽.Then response should contain the following data(src/test/java/API-Test.feature:25)
+                        <full-stacktrace><![CDATA[java.lang.AssertionError: Expected success response but got 403
+	at org.testng.Assert.fail(Assert.java:111)
+	at mission.StepDefinition.iReceiveErrorCodeInResponse(StepDefinition.java:213)
+	at ✽.Then response should contain the following data(src/test/java/API-Test.feature:27)
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="197" finished-at="2026-01-22T22:41:29Z" name="LOGIN - SUCCESSFUL by a user" started-at="2026-01-22T22:41:28Z" status="FAIL">
+                <test-method duration-ms="154" finished-at="2026-01-22T23:18:40Z" name="LOGIN - SUCCESSFUL by a user" started-at="2026-01-22T23:18:40Z" status="FAIL">
                     <exception class="java.lang.AssertionError">
                         <message><![CDATA[Given I login successfully with the following data..........................passed
 Then I should get a response code of 200....................................failed
@@ -229,113 +137,33 @@ Then I should get a response code of 200....................................fail
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)
-	at ✽.Then I should get a response code of 200(src/test/java/API-Test.feature:38)
+	at mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:294)
+	at ✽.Then I should get a response code of 200(src/test/java/API-Test.feature:40)
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="220" finished-at="2026-01-22T22:41:29Z" name="LOGIN - UNSUCCESSFUL by a user" started-at="2026-01-22T22:41:29Z" status="FAIL">
+                <test-method duration-ms="147" finished-at="2026-01-22T23:18:41Z" name="LOGIN - UNSUCCESSFUL by a user" started-at="2026-01-22T23:18:40Z" status="FAIL">
                     <exception class="java.lang.AssertionError">
                         <message><![CDATA[Given I login unsuccessfully with the following data........................passed
-Then I should get a response code of 400....................................failed
-And I should see the following response message:............................skipped
+Then I should get a response code of 403....................................passed
+And I should see the following response message:............................failed
 ]]></message>
-                        <full-stacktrace><![CDATA[java.lang.AssertionError: Response code does not match expected [400] but found [403]
+                        <full-stacktrace><![CDATA[java.lang.AssertionError: Response does not contain expected message. Expected one of: ["error": "Missing password"], Actual: <!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c205e5f28165542',cH: 'bZl9Jx114plHfRoHONDSsVTqiEgDKXSdF6WRp9Bq2Gk-1769098721-1.2.1.1-kEG9pPQO_6swzVCQL53EiaVOBfHpdOawhkq6LqNZOl.rvAn8OcpxHp0HT02KlUq2',cUPMDTk:"\/api\/login?__cf_chl_tk=qv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as",cFPWv: 'b',cITimeS: '1769098721',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/login?__cf_chl_f_tk=qv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as",md: 'v4E8W7B6.H_gC7y6Csn555_LFQPNYVE4XKMWfGUVLJA-1769098721-1.2.1.1-eYPkvKM.e8A75gqj8vLx4.6MOIVWvtL5AE8eCQkBPevblHI5C72IC.AfV_bQWEoSsrtOSMv74K3DjY6sc3Qsztrin0cU4iZWPpR0k8HxB1sSWl0Wbg0TAUqkSmpVen1VmmBw6t5KjyXPNNKi0iyBcZcuUiTmo.JQMN5JGtagDK7POt6wFjdhcsoFFrM5DVGd0TqUcdjOlClYl10ks0ImcbbXF5yxYS_CJT5EMQ5tgJkOqRSHkSoqXMFc7evUQ6PTr7L.QZRhJJSVg8N4kHqmc0DZwEUTnAN9alYigbp8rOjRXqz5Vc1lhnS3v.EBO0.OIiM6OFDD4ddxUBFAX5Op7lbVRysZID.LGSu6V5aQSGg8uwycF70lpE9CHpe30BtJEBC58v7qSpKGn7nVX9HaaI_wFNUoQCoodZSHEH.dcY38IsYuFlw7OBO9J94cO5CJJka2KrPKn_ssUYEohJze0x.PvHfvSqGUheJK7OYcglQFbw7.0RyP4FOa2xmM10expkuPLcPAeZJEd8XUsouTyg9VFmbrDoyKCFH26VIyew0CDNxovS1H4ODFhbVilOlKZtUWdq.RLCRKKXqQwK8AcfEhZ2AfpxLM_uhBiimF5V0nP8qaPQMGalQrjUDRnmfAH_wjuCawK.yCA7Qa6Zj3Z7QVOs6k2P2Otjxp_egPRvMUVINdFTFO.Q6Ahkzyleld6xy0izgjxFI2LTsFoS.BLVDggXfzHAi.ebDtEHpRW3GR46heR39gYeeVBUjy6dcN5_bEFn9hiflSS1iTO_ezvkQ54Qwzf4eBZDFEbE3IJwQSv9w7qB.v7995lvAlWumZgBlsMjTkTgxaQ2S5suDQVctsX7BNdKCcQ_biTi69QKZ9ayM09wIygn7nm.TVXRnU46t_1Q1ZVx5LZ2PmOIk.DLlCuhNzqu5ztjBa3U0wDTGOc2csIrPK_ME8dj9MdE25',mdrd: 'm76NgqD6fDZY45satyGOdSPy0NaS.OB_eJ8bIsxpS1k-1769098721-1.2.1.1-tIzz5Fwrh.p4foU7MB.G1LLgbK0IWR7i93ljTFv4Bp14q2U3n9lOKmql.vsaPDeFe3ZbGtz63UHzB3Tc62yodUA4XrKo8Jm_M2vZDL9k1gHf5_iwf2SxHEWyxzjbEKHOh1EzHMJEYbRN_78TTyCTcsdv6tna.61qopa9nYszOX6kCRl7hToBgmr7bcl5FB2CbAqu__9n0SefxN3fWiIX_seQtgsfzqnS2KSPYp.k6Zd7JHVb2MLTnUQLoJaavZ5ZGtMk.agONzB4gXJEvP5bvQNEi2mDC3X3J7ucEXv04OLuLgsX90.Z9WViXa5y4rmuTuj3GZZ7jYq8jleGDthbmk7Fm7QN7swCXU0q5pXdDTt3aQAInZngZutc63XNa9S7.yE7l17Y7ijwCaHbxJxTqqV.odVmR9juigC1D6K.7c7s7PI8QEmL9ZzT9cRqYW.CkYJGcFl.xUfVqHjY_xEG12z.5WWLNhvHOZrVXxJ0CFCD_.oX9Piiuv1a6tiJz5nl5c2eLrW92MGubNsQAj79Jo9fmFdXKP8NNryZeSM5OTTNl0QD48vdOF.XSX1LHoFZUAwRFtdjQj1A5HWGfcnre6dwl_9Rhs4RS9occKWOulWsCU1_cJnlIgDIXvYLjpw7fVtQQ5j8bGz0etwu3oiXkpMX7uwlvNj.6ZHXhFZw3NoT9z4wiLoI0BrjwxDsYaq7p8k8_wcCHKHlYICQhZ0WZJSW2U.gabraIAe3qB2.OXJumU5fCHXtSiTOuDrtI2u2RRzrHe_uWrBbLfAwfsPKpcCYFBUJkiPfOOU1SoR4mVUHLMZaMKPauhmlZ1p6Dl7j5oz33fpCaHr1zx9.zLHqUK9Wc5WuN6XZXz4gAX2qB9PFmU5eeyafKNfQZBM2eih4qO4KDYcwPaHDjwrte1wGMPMN2NU4yuDjiadq9seFhsZvvijs3IdfVvKW91Q_n2KP97HoOOsEKa8tu.iwqFIm_MnBn8Jqib2pOUDje7mqqvt0Zk4_mD7x_xpGyX6iivxxmyQcyaO87SlPJ4s281oHQeGsdF0YxDNXhIylAGXBRUI6O51vTV5CFekTpJRy52W.TVWiDkMZ7H4cqx7YC7VUbM0hklWy8o9Z9wDCD4S18MbS5prWF94GJ_BXcOtJIukS4Qofojpkwlswiuw3hnFY3q1pWlqRgFVnAe7iztTX3.uvCYriF9XFuDNA3h_ejzCer7lmGpLCbCA_PyBFLjMkprF__8lgVrc5bR908RRoMeo1HMVdmXJlAVI_FM8gT_38BS4bmmHxqo16AscG1IyaK1bZ.DOYTyR21URBx38eF5zBiPywRG4b5jt0rLx05AvzkuYhQGfE9u_gyMSZBXD0C9_9vjicqDQEGGUj_NLq5ZySnI7kXm.HY2ew9EkjQ2aDDGsxSb3H_ifkPTs27I2V1KF3Iz0Y.FhN.TrTFmHnJt2xrMoztWzXvenFHJMhxVMeo1Wf9JihNsTR2MuDPy7GN_clqjjFh0_PHaAgRz_iwxe3C5Kz5sV0NO2nciUCJBigF.NK_KonimJavRpS437iMtDFFfyzXtl2plcgxSPDWX1BPzIRzeX3IP_WwuyWDt.5q8wMLQjS.jSahbXd8DzQWvPLoVufmdgjlpgfO8ea5UiHHynvKKK3LE3uZSLA3LWk65s7EFFSY_Y7ISAp9CQMM2WSJA1q_Id9iJLQ3sovYlj1hG76PEToLtYSYLOqe1mjNYGR5BF5kN9EREJs5GMnJD3EufD6O.JUEcP8eyt5PtF_z4eLmvbGCN70rS5TwNvWJBWNowBEybjGwjv356W4LpZcSSYXdrpH0330qaYhgCxFI.kT5Mwt8EWYRgF6WcN0jQJvUCkolnVg1dPYBnom8jG3ti_Y53KtazxKlpHSiGA2Jw8v_fgjy9wRgetiiN_wl2NcCJZoRJacxzslRPdEJiBywNjMb94xGha_M028LU1dISd4ydNvybpqc4WbtP8w_HZeLJ9nbGJhuEUSqlYHTETCJV9XNZ6om4LT5eqTv74.2ppbISlIQ3ggx.bEX2C6s6SjYBSm4aGB_0b0AticwfyjmikO8UXLzEuES7e9eCZdE6YeTMSUoSmMlP.pW5lsoNvMAUSGISoOWlFekApovUTNS5vVr0Cf3RChG5Lmixlv1vrynMVWhV4xjkV2okbb.fqE2pgmpgaPxYvogKsfR1MR5Ca.kC2E75aVuVjTk9Czd4APCSW3Jp9xgk1UUTzPqea9CmzJAHZVucmkw4LCdjatgNqZFX78kD0W.DzaIM1xk8eHMjasM7dmGF8uRLZzRW7__dUXU9KotOjeJbPBkNk4snCQKOgkX4nNEsgkMtL7irttSalRhU9JnpQ94zvV.RP_o_Ilh9wkBARTdUgfiHIRPWJ4hrL8cjeZaH7yW.tZGEzTyMsQZrUckAFf2cpk6FmeKTWQxWwxdBqii_9BdeOPRkvqydh4TpRi8DzG7Meng6NH5U.qsGen3fZKPVBJpJ0T2E6ZVjE17DiaIPVtwA',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c205e5f28165542';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/login?__cf_chl_rt_tk=qv09jTwuWuixqIIPJ1ZSbjGBlUGuav.Wk6Zq9m_RtFQ-1769098721-1.0.1.1-nVrVFSx3YLZeVldo4N.RRftroR.uMqJCwNkQOmuW0as"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html> expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at mission.StepDefinition.iShouldGetAResponseCodeOf(StepDefinition.java:243)
-	at ✽.Then I should get a response code of 400(src/test/java/API-Test.feature:44)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at mission.StepDefinition.iShouldSeeTheFollowingResponseMessage(StepDefinition.java:320)
+	at ✽.And I should see the following response message:(src/test/java/API-Test.feature:48)
 ]]></full-stacktrace>
                     </exception>
                 </test-method>
-                <test-method duration-ms="214" finished-at="2026-01-22T22:41:29Z" name="Should see the list of users with DELAYED RESPONSE" started-at="2026-01-22T22:41:29Z" status="FAIL">
-                    <exception class="io.restassured.path.json.exception.JsonPathException">
-                        <message><![CDATA[Given I wait for the user list to load......................................failed
-Then I should see that every user has a unique id...........................skipped
-]]></message>
-                        <full-stacktrace><![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getList(JsonPath.java:375)
-	at mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)
-	at ✽.Given I wait for the user list to load(src/test/java/API-Test.feature:49)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getList(JsonPath.java:375)
-	at mission.StepDefinition.iWaitForUserListToLoad(StepDefinition.java:225)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at mission.RunnerTest.feature(RunnerTest.java:33)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></full-stacktrace>
-                    </exception>
-                </test-method>
+                <test-method duration-ms="153" finished-at="2026-01-22T23:18:41Z" name="Should see the list of users with DELAYED RESPONSE" started-at="2026-01-22T23:18:41Z" status="PASS"/>
             </class>
             <class name="Sample Test">
-                <test-method duration-ms="3409" finished-at="2026-01-22T22:41:32Z" name="Sample" started-at="2026-01-22T22:41:29Z" status="PASS"/>
+                <test-method duration-ms="3460" finished-at="2026-01-22T23:18:44Z" name="Sample" started-at="2026-01-22T23:18:41Z" status="PASS"/>
             </class>
             <class name="Checkout items in the basket">
-                <test-method duration-ms="6758" finished-at="2026-01-22T22:41:39Z" name="Check item total cost and tax" started-at="2026-01-22T22:41:32Z" status="PASS"/>
+                <test-method duration-ms="6895" finished-at="2026-01-22T23:18:51Z" name="Check item total cost and tax" started-at="2026-01-22T23:18:44Z" status="PASS"/>
             </class>
         </test>
     </suite>

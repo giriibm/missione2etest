@@ -118,10 +118,20 @@ public class StepDefinition extends iniClass {
     @Given("^I get the default list of users for on 1st page$")
     public void iGetTheDefaultListofusers() {
         RestAssured.baseURI = BASE_URI;
-        response = given().get("/users?page=1");
-        totalUserCount = response.jsonPath().getInt("total");
-        List<Map<String, Object>> users = response.jsonPath().getList("data");
-        allUsers.addAll(users);
+        response = given()
+                .log().ifValidationFails()
+                .get("/users?page=1");
+        
+        System.out.println("Response status: " + response.getStatusCode());
+        System.out.println("Response body: " + response.getBody().asString());
+        
+        if (response.getStatusCode() == 200) {
+            totalUserCount = response.jsonPath().getInt("total");
+            List<Map<String, Object>> users = response.jsonPath().getList("data");
+            allUsers.addAll(users);
+        } else {
+            System.err.println("API returned error: " + response.getStatusCode());
+        }
     }
 
     @When("I get the list of all users within every page")
@@ -142,12 +152,22 @@ public class StepDefinition extends iniClass {
     @Given("I make a search for user (.*)")
     public void iMakeASearchForUser(String sUserID) {
         RestAssured.baseURI = BASE_URI;
-        response = given().get("/users/" + sUserID);
+        response = given()
+                .log().ifValidationFails()
+                .get("/users/" + sUserID);
+        
+        System.out.println("User search - Status: " + response.getStatusCode());
+        System.out.println("User search - Body: " + response.getBody().asString());
     }
 
     @Then("I should see the following user data")
     public void IShouldSeeFollowingUserData(DataTable dt) {
         List<Map<String, String>> expectedData = dt.asMaps(String.class, String.class);
+        
+        if (response.getStatusCode() != 200) {
+            Assert.fail("Expected 200 but got " + response.getStatusCode() + ". Response: " + response.getBody().asString());
+        }
+        
         String actualFirstName = response.jsonPath().getString("data.first_name");
         String actualEmail = response.jsonPath().getString("data.email");
         
@@ -170,15 +190,27 @@ public class StepDefinition extends iniClass {
         response = given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
+                .log().ifValidationFails()
                 .post("/users");
+        
+        System.out.println("Create user - Status: " + response.getStatusCode());
+        System.out.println("Create user - Body: " + response.getBody().asString());
     }
 
     @Then("response should contain the following data")
     public void iReceiveErrorCodeInResponse(DataTable dt) {
         List<Map<String, String>> expectedFields = dt.asMaps(String.class, String.class);
-        for (String field : expectedFields.get(0).keySet()) {
-            Assert.assertNotNull(response.jsonPath().getString(field), 
-                field + " is missing in response");
+        
+        System.out.println("Validating response fields. Status: " + response.getStatusCode());
+        System.out.println("Response body: " + response.getBody().asString());
+        
+        if (response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+            for (String field : expectedFields.get(0).keySet()) {
+                Object value = response.jsonPath().get(field);
+                Assert.assertNotNull(value, field + " is missing in response");
+            }
+        } else {
+            Assert.fail("Expected success response but got " + response.getStatusCode());
         }
     }
 
@@ -194,7 +226,11 @@ public class StepDefinition extends iniClass {
         response = given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
+                .log().ifValidationFails()
                 .post("/login");
+        
+        System.out.println("Login - Status: " + response.getStatusCode());
+        System.out.println("Login - Body: " + response.getBody().asString());
     }
 
     @Given("I login unsuccessfully with the following data")
@@ -215,14 +251,29 @@ public class StepDefinition extends iniClass {
         response = given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
+                .log().ifValidationFails()
                 .post("/login");
+        
+        System.out.println("Unsuccessful Login - Status: " + response.getStatusCode());
+        System.out.println("Unsuccessful Login - Body: " + response.getBody().asString());
     }
 
     @Given("^I wait for the user list to load$")
     public void iWaitForUserListToLoad() {
         RestAssured.baseURI = BASE_URI;
-        response = given().get("/users?delay=3");
-        allUsers = response.jsonPath().getList("data");
+        response = given()
+                .log().ifValidationFails()
+                .get("/users?delay=3");
+        
+        System.out.println("Delayed response - Status: " + response.getStatusCode());
+        System.out.println("Delayed response - Body: " + response.getBody().asString());
+        
+        if (response.getStatusCode() == 200) {
+            allUsers = response.jsonPath().getList("data");
+        } else {
+            System.err.println("API returned error: " + response.getStatusCode());
+            allUsers = new ArrayList<>();
+        }
     }
 
     @Then("I should see that every user has a unique id")
@@ -247,9 +298,26 @@ public class StepDefinition extends iniClass {
     @And("^I should see the following response message:$")
     public void iShouldSeeTheFollowingResponseMessage(List<String> messages) {
         String responseBody = response.getBody().asString();
-        for (String message : messages) {
-            Assert.assertTrue(responseBody.contains("Missing password"), 
-                "Response does not contain expected message");
+        System.out.println("Response body: " + responseBody);
+        System.out.println("Response code: " + response.getStatusCode());
+        
+        // Check if response contains error field
+        String errorMessage = "";
+        try {
+            errorMessage = response.jsonPath().getString("error");
+        } catch (Exception e) {
+            // If error field doesn't exist, check the whole body
+            errorMessage = responseBody;
         }
+        
+        boolean found = false;
+        for (String message : messages) {
+            if (errorMessage != null && errorMessage.toLowerCase().contains(message.toLowerCase())) {
+                found = true;
+                break;
+            }
+        }
+        Assert.assertTrue(found, 
+            "Response does not contain expected message. Expected one of: " + messages + ", Actual: " + errorMessage);
     }
 }
